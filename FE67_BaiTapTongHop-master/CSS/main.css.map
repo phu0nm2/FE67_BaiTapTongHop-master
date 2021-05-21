@@ -1,0 +1,32 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../scss/main.scss",
+        "../scss/Helpers/_mixin.scss",
+        "../scss/Helpers/_variables.scss",
+        "../scss/Base/_customize.scss",
+        "../scss/Base/_reset.scss",
+        "../scss/Component/_button.scss",
+        "../scss/Layout/_header.scss",
+        "../scss/Layout/_cover.scss",
+        "../scss/Layout/_intro.scss",
+        "../scss/Layout/_services.scss",
+        "../scss/Layout/_info.scss",
+        "../scss/Layout/_marketplace.scss",
+        "../scss/Layout/_solution.scss",
+        "../scss/Layout/_feedback.scss",
+        "../scss/Layout/_logo.scss",
+        "../scss/Layout/_carousel.scss",
+        "../scss/Layout/_guides.scss",
+        "../scss/Layout/_signup.scss",
+        "../scss/Layout/_footer.scss",
+        "../scss/Pages/_home.scss",
+        "../scss/Pages/_about.scss",
+        "../scss/Pages/_contact.scss",
+        "../scss/Theme/_admin.scss",
+        "../scss/Theme/_theme.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}
