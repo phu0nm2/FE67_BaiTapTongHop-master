@@ -1,1 +1,141 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #62646a;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.header-nav {
+  padding: 20px 0;
+}
+
+.header-nav .container-fluid {
+  padding: 0 30px;
+}
+
+.header-nav__left {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav__logo {
+  display: inline-block;
+  margin-right: 35px;
+}
+
+.header-nav__logo svg g:first-child {
+  fill: #404145;
+}
+
+.header-nav__logo svg g:last-child {
+  fill: #1dbf73;
+}
+
+.header-nav__search {
+  position: relative;
+  flex: 1;
+}
+
+.header-nav__search input {
+  color: #404145;
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+  padding: 5px 75px 5px 30px;
+  background-color: #fff;
+  border: 1px solid #dadbdd;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  transition: all 0.2s linear;
+}
+
+.header-nav__search input:hover,
+.header-nav__search input:focus {
+  outline: none;
+  border-color: #95979d;
+}
+
+.header-nav__search i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 35px;
+  width: 30px;
+  line-height: 35px;
+  text-align: center;
+}
+
+.header-nav__search button {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 6px 10px;
+  background-color: #1dbf73;
+  border: none;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  transition: all 0.2s linear;
+}
+
+.header-nav__search button:focus {
+  outline: none;
+}
+
+.header-nav__search button:hover {
+  background-color: #19a463;
+}
+
+.header-nav__right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.header-nav__menu {
+  display: flex;
+  list-style: none;
+  margin-bottom: 0;
+}
+
+.header-nav__item {
+  padding: 0 10px;
+}
+
+.header-nav__link {
+  color: #62646a;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.2s linear;
+}
+
+.header-nav__link:hover {
+  text-decoration: none;
+  color: #1dbf73;
+}
+
+.header-nav__join {
+  padding: 5px 20px;
+  background-color: transparent;
+  border: 1px solid #1dbf73;
+  border-radius: 4px;
+  transition: all 0.2s linear;
+  color: #19a463;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.header-nav__join:hover {
+  text-decoration: none;
+  color: #fff;
+  background-color: #19a463;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,110 @@
+.header-nav {
+  padding: $pd-2 0;
+  .container-fluid {
+    padding: 0 ($pd-2 + 10);
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    display: inline-block;
+    margin-right: $mg-2 + 10;
+    svg g:first-child {
+      fill: $black-color-1;
+    }
+    svg g:last-child {
+      fill: $green-color-0;
+    }
+  }
+
+  &__search {
+    position: relative;
+    flex: 1;
+    input {
+      @include styleText($black-color-1, $fs-0, $fw-bold-0);
+      width: 100%;
+      padding: 5px 75px 5px 30px;
+      background-color: $white-color-0;
+      border: 1px solid $gray-color-1;
+      border-top-left-radius: $border-radius;
+      border-bottom-left-radius: $border-radius;
+      transition: all 0.2s linear;
+    }
+    input:hover,
+    input:focus {
+      outline: none;
+      border-color: $gray-color-2;
+    }
+    i {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 35px;
+      width: 30px;
+      line-height: 35px;
+      text-align: center;
+    }
+    button {
+      @include styleText($white-color-0, $fs-0, $fw-bold-0);
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 6px $pd-1;
+      background-color: $green-color-0;
+      border: none;
+      border-top-right-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+      transition: all 0.2s linear;
+    }
+    button:focus {
+      outline: none;
+    }
+    button:hover {
+      background-color: $green-color-1;
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__menu {
+    display: flex;
+    list-style: none;
+    margin-bottom: 0;
+  }
+
+  &__item {
+    padding: 0 $pd-1;
+  }
+
+  &__link {
+    @include styleText($gray-color-0, $fs-0, $fw-bold-0);
+    transition: all 0.2s linear;
+    &:hover {
+      text-decoration: none;
+      color: $green-color-0;
+    }
+  }
+
+  &__join {
+    @include styleButton(
+      $pd-0,
+      $pd-2,
+      transparent,
+      $green-color-0,
+      $border-radius
+    );
+    @include styleText($green-color-1, $fs-1 + 1, $fw-bold-1);
+    &:hover {
+      text-decoration: none;
+      color: $white-color-0;
+      background-color: $green-color-1;
+    }
+  }
+}
