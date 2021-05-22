@@ -31,15 +31,18 @@
 
     <!-- MY CSS -->
     <link rel="stylesheet" href="./CSS/main.css" />
+
+    <!-- slick -->
+    <link rel="stylesheet" href="./CSS/slick.css" />
   </head>
 
   <body>
     <!-- Header Start -->
-    <header id="header">
+    <header id="header" class="header-transparent">
       <nav class="header-nav">
         <div class="container-fluid">
           <div class="row">
-            <div class="header-nav__left col-5">
+            <div class="header-nav__left col-8 col-md-8 col-lg-5">
               <div class="header-nav__bars">
                 <i class="fa fa-bars"></i>
               </div>
@@ -69,30 +72,30 @@
                 <button type="submit">Search</button>
               </form>
             </div>
-            <div class="header-nav__right col-7">
+            <div class="header-nav__right col-4 col-md-4 col-lg-7">
               <ul class="header-nav__menu">
-                <li class="header-nav__item">
+                <li class="header-nav__item business">
                   <a href="#" class="header-nav__link">Fiverr Business</a>
                 </li>
-                <li class="header-nav__item">
+                <li class="header-nav__item explore">
                   <a href="#" class="header-nav__link">Explore</a>
                 </li>
-                <li class="header-nav__item">
+                <li class="header-nav__item language">
                   <a href="#" class="header-nav__link">
                     <i class="fas fa-globe"></i>
                     English
                   </a>
                 </li>
-                <li class="header-nav__item">
+                <li class="header-nav__item currency">
                   <a href="#" class="header-nav__link">$USD</a>
                 </li>
-                <li class="header-nav__item">
+                <li class="header-nav__item seller">
                   <a href="#" class="header-nav__link">Become a Seller</a>
                 </li>
-                <li class="header-nav__item">
+                <li class="header-nav__item signin">
                   <a href="#" class="header-nav__link">Sign In</a>
                 </li>
-                <li class="header-nav__item">
+                <li class="header-nav__item join">
                   <a href="#" class="header-nav__join">JoIn</a>
                 </li>
               </ul>
@@ -561,7 +564,81 @@
     <!-- End Header -->
 
     <!-- Cover Start -->
-    <section id="cover"></section>
+    <section id="cover">
+      <div class="cover-text__left">
+        <h1>
+          Find the perfect
+          <i>freelance</i>
+          services for your business
+        </h1>
+        <form action="#" class="header-nav__search">
+          <input type="text" placeholder="Try 'Building mobile app' " />
+          <i class="fa fa-search"></i>
+          <button type="submit">Search</button>
+        </form>
+        <div class="cover-text__courses">
+          popular:
+          <ul>
+            <li><a href="#">Website Design</a></li>
+            <li><a href="#">WordPress</a></li>
+            <li><a href="#">Logo Design</a></li>
+            <li><a href="#">Dropshipping</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="cover-content">
+        <div class="cover-item">
+          <div class="cover-img">
+            <img class="styleImg" src="./img/bg-hero-1-1792-x1.jfif" alt="" />
+          </div>
+          <div class="cover-text__right">
+            <p>Andrea, Fashion Designer</p>
+          </div>
+        </div>
+        <div class="cover-item">
+          <div class="cover-img">
+            <img class="styleImg" src="./img/bg-hero-2-1792-x1.png" alt="" />
+          </div>
+          <div class="cover-text__right cover-text__rating">
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <p>Moon, Marketing Expert</p>
+          </div>
+        </div>
+        <div class="cover-item">
+          <div class="cover-img">
+            <img class="styleImg" src="./img/bg-hero-3-1792-x1.jfif" alt="" />
+          </div>
+          <div class="cover-text__right">
+            <p>Ritika, Shoemaker and Designer</p>
+          </div>
+        </div>
+        <div class="cover-item">
+          <div class="cover-img">
+            <img class="styleImg" src="./img/bg-hero-4-1792-x1.jfif" alt="" />
+          </div>
+          <div class="cover-text__right">
+            <p>Zach, Bar Owner</p>
+          </div>
+        </div>
+        <div class="cover-item">
+          <div class="cover-img">
+            <img class="styleImg" src="./img/bg-hero-5-1792-x1.jfif" alt="" />
+          </div>
+          <div class="cover-text__right cover-text__rating">
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <p>Gabrielle, Video Editor</p>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- End Cover -->
 
     <!-- intro Start -->
@@ -625,5 +702,19 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+
+    <!-- slick js -->
+    <script src="./js/slick.min.js"></script>
+    <script>
+      $(".cover-content").slick({
+        loop: true,
+        autoplay: true,
+        fade: true,
+        speed: 3000,
+        arrows: false,
+        // dots: true,
+      });
+    </script>
+    <script src="./js/style.js"></script>
   </body>
 </html>

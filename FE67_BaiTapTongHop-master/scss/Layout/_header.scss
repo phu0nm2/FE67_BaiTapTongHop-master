@@ -1,8 +1,57 @@
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}
+
+// HEADER-TRANSPARENT
+#header.header-transparent {
+  .header-nav {
+    border-bottom-color: transparent;
+    background-color: transparent;
+    &__bars {
+      color: $white-color-0;
+    }
+    &__logo g:first-child {
+      fill: $white-color-0;
+    }
+    &__search {
+      opacity: 0;
+      visibility: hidden;
+    }
+    &__link {
+      color: $white-color-0;
+    }
+    &__join {
+      color: $white-color-0;
+      border-color: $white-color-0;
+      &:hover {
+        border-color: $green-color-0;
+      }
+    }
+  }
+
+  .header-cate {
+    opacity: 0;
+    visibility: hidden;
+    background-color: transparent;
+  }
+}
+
+// HEADER-NAV
 .header-nav {
   padding: $pd-2 0;
   border-bottom: 1px solid $gray-color-3;
+  background-color: $white-color-0;
+  transition: all 0.2s linear;
   .container-fluid {
     padding: 0 ($pd-2 + 10);
+  }
+
+  .row {
+    flex-wrap: nowrap;
   }
 
   &__left {
@@ -23,6 +72,7 @@
     margin-right: $mg-2 + 10;
     svg g:first-child {
       fill: $black-color-1;
+      transition: all 0.2s linear;
     }
     svg g:last-child {
       fill: $green-color-0;
@@ -33,6 +83,7 @@
     position: relative;
     flex: 1;
     display: flex;
+    transition: all 0.2s linear;
 
     input {
       @include styleText($black-color-1, ($fs-1 + 1), $fw-bold-0);
@@ -121,8 +172,11 @@
   }
 }
 
+// HEADER-CATE
 .header-cate {
   border-bottom: 1px solid $gray-color-3;
+  background-color: $white-color-0;
+  transition: all 0.2s linear;
 
   .container-fluid {
     padding: 0 ($pd-2 + 5);
@@ -171,17 +225,19 @@
   }
 }
 
+// HEADER-DROPDOWN
 .header-dropdown {
   display: none;
   grid-column-gap: 10px;
   position: absolute;
   left: 0;
   padding: $pd-2 ($pd-2 + 10);
+  background-color: $white-color-0;
   border: 1px solid $gray-color-3;
   border-radius: $border-radius;
   list-style: none;
   box-shadow: 0 1px 3px $gray-color-1;
-  z-index: 1;
+  z-index: 3;
 
   &.dropdown-left {
     right: 0;
@@ -232,4 +288,79 @@
 
 .header-cate__item:hover .header-cate__link::after {
   opacity: 1;
+}
+
+// RESPONSIVE
+@include responsive("extra-large") {
+  .header-nav {
+    &__bars {
+      display: block;
+    }
+
+    &__search {
+      input {
+        border-right: 1px solid $gray-color-1;
+        border-radius: $border-radius;
+      }
+      button {
+        display: none;
+      }
+    }
+
+    &__item {
+      &.language,
+      &.currency {
+        display: none;
+      }
+    }
+  }
+
+  .header-cate {
+    display: none;
+  }
+}
+
+@include responsive("large") {
+  .header-nav {
+    &__item {
+      &.business,
+      &.explore,
+      &.seller {
+        display: none;
+      }
+    }
+  }
+}
+
+@include responsive("small") {
+  .header-nav {
+    &__logo {
+      width: 100%;
+      text-align: right;
+      margin-right: 0;
+    }
+
+    &__search {
+      display: none;
+    }
+
+    &__item {
+      &.signin {
+        display: none;
+      }
+      &.join {
+        padding: 0;
+      }
+    }
+
+    &__join {
+      @include styleText($gray-color-0, $fs-2, $fw-bold-1);
+      padding: 0;
+      border: none;
+      &:hover {
+        color: $gray-color-0;
+        background-color: transparent;
+      }
+    }
+  }
 }
