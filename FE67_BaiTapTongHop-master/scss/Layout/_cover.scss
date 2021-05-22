@@ -1,0 +1,62 @@
+#cover {
+  position: relative;
+  .cover-text__left {
+    position: absolute;
+    width: 45%;
+    top: 5%;
+    left: 0;
+    transform: translate(20%, 50%);
+    z-index: 2;
+    h1 {
+      @include styleText($white-color-0, $fs-2 + $fs-2, $fw-bold);
+      i {
+        font-weight: 400;
+      }
+    }
+    form {
+      width: 90%;
+    }
+    .cover-text__courses {
+      display: flex;
+      padding-top: $pd-2;
+      @include styleText($white-color-0, $fs-0 - 3, $fw-normal);
+      ul,
+      li {
+        display: flex;
+        list-style: none;
+
+        a {
+          text-decoration: none;
+          @include styleText($white-color-0, $fs-0 - 3, $fw-normal);
+          padding: 1px 12px 0;
+          border: 1px solid $white-color-0;
+          border-radius: 40px;
+        }
+        & {
+          margin-left: $mg-1;
+        }
+      }
+    }
+  }
+  .cover-content {
+    position: relative;
+    .cover-text__right {
+      position: absolute;
+      display: flex;
+      bottom: 0;
+      right: 5%;
+      transform: translateX(-50%);
+      @include styleText($white-color-0, $fs-0 - 2, $fw-bold);
+    }
+    .cover-text__rating {
+      display: block;
+      i {
+        @include styleText($yellow-color-0, $fs-1 - 4, $fw-bold);
+      }
+    }
+    img {
+      width: 100%;
+      height: 500px;
+    }
+  }
+}

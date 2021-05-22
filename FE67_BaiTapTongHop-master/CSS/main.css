@@ -199,4 +199,91 @@ body {
 .header-cate__link:hover::after {
   opacity: 1;
 }
+
+#cover {
+  position: relative;
+}
+
+#cover .cover-text__left {
+  position: absolute;
+  width: 45%;
+  top: 5%;
+  left: 0;
+  transform: translate(20%, 50%);
+  z-index: 2;
+}
+
+#cover .cover-text__left h1 {
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+#cover .cover-text__left h1 i {
+  font-weight: 400;
+}
+
+#cover .cover-text__left form {
+  width: 90%;
+}
+
+#cover .cover-text__left .cover-text__courses {
+  display: flex;
+  padding-top: 20px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+#cover .cover-text__left .cover-text__courses ul,
+#cover .cover-text__left .cover-text__courses li {
+  display: flex;
+  list-style: none;
+}
+
+#cover .cover-text__left .cover-text__courses ul a,
+#cover .cover-text__left .cover-text__courses li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 1px 12px 0;
+  border: 1px solid #fff;
+  border-radius: 40px;
+}
+
+#cover .cover-text__left .cover-text__courses ul,
+#cover .cover-text__left .cover-text__courses li {
+  margin-left: 10px;
+}
+
+#cover .cover-content {
+  position: relative;
+}
+
+#cover .cover-content .cover-text__right {
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  right: 5%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#cover .cover-content .cover-text__rating {
+  display: block;
+}
+
+#cover .cover-content .cover-text__rating i {
+  color: #d1d120;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+#cover .cover-content img {
+  width: 100%;
+  height: 500px;
+}
 /*# sourceMappingURL=main.css.map */
