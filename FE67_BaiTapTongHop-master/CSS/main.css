@@ -469,7 +469,50 @@ body {
   height: 500px;
 }
 
-#intro {
-  height: 2000px;
+.intro {
+  background-color: #fafafa;
+  padding: 15px 0;
+}
+
+.intro__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro__text {
+  color: #b5b6ba;
+  font-size: 16px;
+  font-weight: 700;
+  padding-right: 20px;
+}
+
+.intro__logos {
+  padding: 0 24px;
+}
+
+.intro__logos img + img {
+  padding-left: 60px;
+}
+
+@media screen and (max-width: 1200px) {
+  .intro__text {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .intro__logos {
+    padding: 0;
+  }
+  .intro__logos img {
+    height: 50px;
+  }
+  .intro__logos img + img {
+    padding-left: 10px;
+  }
+  .intro__logos img:last-child {
+    display: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */
