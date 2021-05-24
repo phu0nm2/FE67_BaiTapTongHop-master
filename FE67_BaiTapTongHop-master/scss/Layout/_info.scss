@@ -1,0 +1,85 @@
+.info {
+  padding: 96px 17px;
+  background-color: $green-color-2;
+
+  &__text {
+    padding-right: 145px;
+  }
+
+  &__title {
+    @include styleText($black-color-1, 34px, $fw-bold-1);
+    margin-bottom: ($mg-2 - 1);
+  }
+
+  &__item {
+    & + & {
+      margin-top: $mg-2 - 1;
+    }
+
+    h6 {
+      @include styleText($black-color-1, ($fs-0 + 2), $fw-bold-1);
+      display: flex;
+      align-items: center;
+    }
+    h6 i {
+      font-size: $fs-3;
+      color: $gray-color-4;
+      margin-right: $mg-1;
+    }
+    p {
+      @include styleText($gray-color-0, ($fs-0 + 2), $fw-normal);
+      margin-bottom: 0;
+    }
+  }
+
+  &__video {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    cursor: pointer;
+
+    .play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 80px;
+      width: 80px;
+      background: url("../img/desktop-play-button.c1196d6.png") no-repeat;
+      background-size: 80px;
+    }
+  }
+}
+
+@include responsive("extra-large") {
+  .info {
+    padding: 64px 17px;
+
+    &__text {
+      padding-right: 70px;
+    }
+  }
+}
+
+@include responsive("medium") {
+  .info {
+    padding: 48px 9px;
+
+    &__title {
+      font-size: $fs-3 + 4;
+      margin-bottom: $mg-2 - 5;
+    }
+
+    &__text {
+      padding-right: 0;
+      margin-bottom: 48px;
+    }
+
+    &__item {
+      & + & {
+        margin-top: $mg-2 - 5;
+      }
+    }
+  }
+}
