@@ -388,29 +388,40 @@ body {
 
 #cover .cover-text__left {
   position: absolute;
-  width: 45%;
-  top: 5%;
-  left: 0;
+  width: 100%;
+  max-width: 50%;
+  top: 15%;
+  left: -8%;
   transform: translate(20%, 50%);
   z-index: 2;
 }
 
 #cover .cover-text__left h1 {
   color: #fff;
-  font-size: 40px;
+  font-size: 48px;
   font-weight: bold;
+  width: 90%;
+  max-width: 90%;
+  padding-bottom: 20px;
 }
 
 #cover .cover-text__left h1 i {
   font-weight: 400;
 }
 
-#cover .cover-text__left form {
-  width: 90%;
+#cover .cover-text__left .cover-nav__search {
+  width: 85%;
+  height: 48px;
+}
+
+#cover .cover-text__left .cover-nav__search i {
+  top: 7px;
 }
 
 #cover .cover-text__left .cover-text__courses {
   display: flex;
+  width: 100%;
+  max-width: 85%;
   padding-top: 20px;
   color: #fff;
   font-size: 13px;
@@ -427,9 +438,9 @@ body {
 #cover .cover-text__left .cover-text__courses li a {
   text-decoration: none;
   color: #fff;
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 400;
-  padding: 1px 12px 0;
+  padding: 1px 12px;
   border: 1px solid #fff;
   border-radius: 40px;
 }
@@ -466,7 +477,61 @@ body {
 
 #cover .cover-content img {
   width: 100%;
-  height: 500px;
+  height: 550px;
+}
+
+@media screen and (max-width: 1200px) {
+  .cover-text__left .cover-btn__search {
+    display: block;
+  }
+  .cover-text__courses {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #cover .cover-text__left {
+    left: -8%;
+    max-width: 55%;
+  }
+  #cover .cover-text__left h1 {
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #cover {
+    background: #023a15;
+    height: 500px;
+  }
+  #cover .cover-text__left {
+    max-width: 85%;
+    left: 1%;
+  }
+  #cover .cover-text__left .cover-text__courses {
+    display: none;
+  }
+  #cover .cover-text__left .cover-nav__search {
+    flex-direction: column;
+    max-width: 80%;
+    height: 110px;
+  }
+  #cover .cover-text__left .cover-nav__search input {
+    margin-bottom: 10px;
+    height: 100px;
+  }
+  #cover .cover-text__left .cover-nav__search button {
+    height: 100px;
+  }
+  #cover .cover-text__left h1 {
+    font-size: 40px;
+    max-width: 85%;
+  }
+  #cover .cover-content.slick-slider {
+    display: none;
+  }
 }
 
 #intro {

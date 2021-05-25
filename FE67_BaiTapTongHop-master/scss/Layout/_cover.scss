@@ -2,22 +2,32 @@
   position: relative;
   .cover-text__left {
     position: absolute;
-    width: 45%;
-    top: 5%;
-    left: 0;
+    width: 100%;
+    max-width: 50%;
+    top: 15%;
+    left: -8%;
     transform: translate(20%, 50%);
     z-index: 2;
     h1 {
-      @include styleText($white-color-0, $fs-2 + $fs-2, $fw-bold);
+      @include styleText($white-color-0, $fs-4 + 8, $fw-bold);
+      width: 90%;
+      max-width: 90%;
+      padding-bottom: $pd-2;
       i {
         font-weight: 400;
       }
     }
-    form {
-      width: 90%;
+    .cover-nav__search {
+      width: 85%;
+      height: $fs-4 + 8;
+      i {
+        top: 7px;
+      }
     }
     .cover-text__courses {
       display: flex;
+      width: 100%;
+      max-width: 85%;
       padding-top: $pd-2;
       @include styleText($white-color-0, $fs-0 - 3, $fw-normal);
       ul,
@@ -27,8 +37,8 @@
 
         a {
           text-decoration: none;
-          @include styleText($white-color-0, $fs-0 - 3, $fw-normal);
-          padding: 1px 12px 0;
+          @include styleText($white-color-0, $fs-1 - 3, $fw-normal);
+          padding: 1px 12px;
           border: 1px solid $white-color-0;
           border-radius: 40px;
         }
@@ -56,7 +66,64 @@
     }
     img {
       width: 100%;
-      height: 500px;
+      height: 550px;
+    }
+  }
+}
+
+@include responsive("extra-large") {
+  .cover-text__left {
+    .cover-btn__search {
+      display: block;
+    }
+  }
+  .cover-text__courses {
+    max-width: 90%;
+  }
+}
+
+@include responsive("x-large") {
+  #cover {
+    .cover-text__left {
+      left: -8%;
+      max-width: 55%;
+      h1 {
+        @include styleText($white-color-0, $fs-4, $fw-bold);
+      }
+    }
+  }
+}
+
+@include responsive("medium") {
+  #cover {
+    background: #023a15;
+    height: 500px;
+    .cover-text__left {
+      // position: relative;
+      max-width: 85%;
+      left: 1%;
+      .cover-text__courses {
+        display: none;
+      }
+      .cover-nav__search {
+        flex-direction: column;
+        max-width: 80%;
+        height: 110px;
+        input {
+          margin-bottom: $mg-1;
+          height: 100px;
+        }
+        button {
+          height: 100px;
+        }
+      }
+      h1 {
+        font-size: $fs-4;
+        max-width: 85%;
+      }
+    }
+    .cover-content.slick-slider {
+      display: none;
     }
   }
 }
