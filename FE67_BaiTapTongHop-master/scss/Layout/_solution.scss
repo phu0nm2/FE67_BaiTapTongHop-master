@@ -1,0 +1,119 @@
+.solution {
+  padding: 96px 17px;
+  background-color: $blue-color-0;
+
+  &__text {
+    padding-right: 65px;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: ($mg-2 + 7);
+    svg {
+      width: 178px;
+      height: 22px;
+    }
+    span {
+      display: inline-block;
+      @include styleText($white-color-0, ($fs-1 - 2), $fw-bold-1);
+      text-transform: uppercase;
+      padding: 0 ($pd-0 + 3);
+      margin-left: $mg-0;
+      background-color: $blue-color-1;
+      border-radius: 30px;
+    }
+  }
+
+  &__title {
+    @include styleText($white-color-0, 32px, $fw-bold-1);
+    max-width: 420px;
+    margin-bottom: $mg-2 - 1;
+    i {
+      font-weight: $fw-bold-0;
+    }
+  }
+
+  &__desc {
+    @include styleText($white-color-0, $fs-0 + 2, $fw-normal);
+    max-width: 420px;
+    margin-bottom: $mg-2 + 7;
+  }
+
+  &__list {
+    list-style: none;
+    margin-bottom: 48px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    color: $white-color-0;
+    padding-bottom: $pd-1 + 2;
+    i {
+      font-size: $fs-3;
+      color: $gray-color-4;
+    }
+    p {
+      font-size: $fs-0 + 2;
+      margin-left: $mg-1;
+      margin-bottom: 0;
+    }
+  }
+
+  &__btn {
+    @include styleButton(
+      $pd-1 + 0.5,
+      $pd-2 + 10,
+      $green-color-0,
+      $green-color-0,
+      $border-radius
+    );
+    @include styleText($white-color-0, $fs-0, $fw-bold-1);
+    display: inline-block;
+    &:hover {
+      @include styleButtonHover($white-color-0, $green-color-1, $green-color-1);
+      text-decoration: none;
+    }
+  }
+}
+
+@include responsive("extra-large") {
+  .solution {
+    padding: 64px 17px;
+
+    &__text {
+      padding-right: 50px;
+    }
+  }
+}
+
+@include responsive("medium") {
+  .solution {
+    padding: 48px 9px;
+
+    &__text {
+      padding-right: 0;
+      margin-bottom: 48px;
+    }
+
+    &__title {
+      max-width: 100%;
+      font-size: $fs-3 + 4;
+      margin-bottom: $mg-2 - 5;
+    }
+
+    &__desc {
+      max-width: 100%;
+      margin-bottom: $mg-1 + 6;
+    }
+
+    &__item {
+      padding-bottom: $pd-1 + 6;
+    }
+
+    &__list {
+      margin-bottom: 36px;
+    }
+  }
+}
