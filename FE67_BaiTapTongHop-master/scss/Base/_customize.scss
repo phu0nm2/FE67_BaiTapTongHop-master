@@ -1,0 +1,23 @@
+#modalVideo {
+  .modal-dialog {
+    width: 70vw;
+    max-width: 900px;
+    @include responsive("small") {
+      width: unset;
+    }
+  }
+
+  .modal-content {
+    background-color: transparent;
+    border: none;
+  }
+
+  .modal-body {
+    padding: 0;
+  }
+
+  .modal-video {
+    width: 100%;
+    border-radius: $border-radius;
+  }
+}

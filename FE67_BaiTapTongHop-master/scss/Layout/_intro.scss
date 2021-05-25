@@ -1,3 +1,47 @@
-#intro {
-  height: 2000px;
+.intro {
+  background-color: $white-color-1;
+  padding: ($pd-1 + 5) 0;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__text {
+    @include styleText($gray-color-5, $fs-0, $fw-bold-1);
+    padding-right: $pd-2;
+  }
+
+  &__logos {
+    padding: 0 ($pd-2 + 4);
+    img + img {
+      padding-left: 60px;
+    }
+  }
+}
+
+@include responsive("extra-large") {
+  .intro {
+    &__text {
+      display: none;
+    }
+  }
+}
+
+@include responsive("medium") {
+  .intro {
+    &__logos {
+      padding: 0;
+      img {
+        height: 50px;
+      }
+      img + img {
+        padding-left: $pd-1;
+      }
+      img:last-child {
+        display: none;
+      }
+    }
+  }
 }
