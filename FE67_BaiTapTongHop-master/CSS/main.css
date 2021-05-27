@@ -1,24 +1,44 @@
-#modalVideo .modal-dialog {
+#modalVideo .modal-dialog,
+#myModalOne .modal-dialog,
+#myModalTwo .modal-dialog,
+#myModalThree .modal-dialog,
+#myModalFour .modal-dialog {
   width: 70vw;
   max-width: 900px;
 }
 
 @media screen and (max-width: 576px) {
-  #modalVideo .modal-dialog {
+  #modalVideo .modal-dialog,
+  #myModalOne .modal-dialog,
+  #myModalTwo .modal-dialog,
+  #myModalThree .modal-dialog,
+  #myModalFour .modal-dialog {
     width: unset;
   }
 }
 
-#modalVideo .modal-content {
+#modalVideo .modal-content,
+#myModalOne .modal-content,
+#myModalTwo .modal-content,
+#myModalThree .modal-content,
+#myModalFour .modal-content {
   background-color: transparent;
   border: none;
 }
 
-#modalVideo .modal-body {
+#modalVideo .modal-body,
+#myModalOne .modal-body,
+#myModalTwo .modal-body,
+#myModalThree .modal-body,
+#myModalFour .modal-body {
   padding: 0;
 }
 
-#modalVideo .modal-video {
+#modalVideo .modal-video,
+#myModalOne .modal-video,
+#myModalTwo .modal-video,
+#myModalThree .modal-video,
+#myModalFour .modal-video {
   width: 100%;
   border-radius: 4px;
 }
@@ -997,7 +1017,6 @@ body {
 
 .feedback .feedback-content .feedback-item {
   display: flex;
-  justify-content: center;
 }
 
 .feedback .feedback-content .feedback-item__right {
@@ -1058,5 +1077,54 @@ body {
   background: white;
   top: 45%;
   right: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .feedback .feedback-content .feedback-item {
+    padding-left: 10px;
+  }
+  .feedback .feedback-content .feedback-item__right {
+    padding: 0 15px;
+  }
+  .feedback .feedback-content .feedback-item__title {
+    flex-direction: column;
+  }
+  .feedback .feedback-content .feedback-item__title h2 {
+    border: none;
+  }
+  .feedback .feedback-content .feedback-item__title img {
+    width: 100px;
+  }
+  .feedback .feedback-content .feedback-item__text {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .feedback .feedback-content .feedback-item {
+    flex-direction: column;
+    text-align: justify;
+  }
+  .feedback .feedback-content .feedback-item__right {
+    width: 100%;
+  }
+  .feedback .feedback-content .feedback-item__text {
+    font-size: 24px;
+  }
+  .feedback .feedback-content .priv_arrow {
+    top: 25%;
+  }
+  .feedback .feedback-content .next_arrow {
+    top: 25%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .feedback .feedback-content .priv_arrow {
+    top: 13%;
+  }
+  .feedback .feedback-content .next_arrow {
+    top: 13%;
+  }
 }
 /*# sourceMappingURL=main.css.map */
