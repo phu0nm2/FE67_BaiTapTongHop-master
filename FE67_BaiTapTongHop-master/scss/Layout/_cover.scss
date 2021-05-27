@@ -127,3 +127,22 @@
     }
   }
 }
+
+@include responsive("small") {
+  #cover {
+    height: 400px;
+    .cover-text__left {
+      top: -10%;
+
+      h1 {
+        font-size: $fs-4 - 8;
+      }
+      .cover-nav__search {
+        display: flex;
+        input {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
