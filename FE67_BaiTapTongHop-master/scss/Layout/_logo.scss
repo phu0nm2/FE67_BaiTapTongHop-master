@@ -1,0 +1,119 @@
+.logo {
+  padding: 0 17px;
+  margin-bottom: 96px;
+
+  &__container {
+    background: url("../img/logo-maker-banner-wide-desktop-1352-2x.png")
+      no-repeat center;
+    background-size: cover;
+    background-color: $blue-color-2;
+    object-fit: contain;
+    position: relative;
+  }
+
+  &__text {
+    padding: 36px 0 36px 76px;
+    max-width: 450px;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: $mg-2;
+    svg {
+      width: 188px;
+      height: 26px;
+    }
+    span {
+      @include styleText($white-color-0, ($fs-1 - 2), $fw-bold-1);
+      text-transform: uppercase;
+      margin-left: $mg-1 + 5;
+    }
+  }
+
+  &__title {
+    @include styleText($white-color-0, 34px, $fw-bold-1);
+    margin-bottom: $mg-1 - 2;
+    i {
+      font-family: italic;
+      font-weight: $fw-bold;
+    }
+  }
+
+  &__desc {
+    @include styleText($white-color-0, $fs-0 + 1, $fw-normal);
+    margin-bottom: $mg-2 - 1;
+  }
+
+  &__btn {
+    display: inline-block;
+    @include styleButton(
+      $pd-1 - 2,
+      $pd-2 + 10,
+      $white-color-0,
+      $white-color-0,
+      $border-radius
+    );
+    @include styleText($blue-color-2, $fs-0, $fw-bold-0);
+    &:hover {
+      @include styleButtonHover($blue-color-4, $blue-color-3, $blue-color-3);
+      text-decoration: none;
+    }
+  }
+
+  &__image {
+    display: none;
+    img {
+      width: 100%;
+      display: block;
+      object-fit: contain;
+    }
+  }
+}
+
+@include responsive("extra-large") {
+  .logo {
+    &__container {
+      background-size: auto;
+    }
+  }
+}
+
+@include responsive("x-large") {
+  .logo {
+    margin-bottom: 80px;
+    &__container {
+      background-image: none;
+    }
+
+    &__text {
+      position: relative;
+      max-width: 400px;
+      padding-left: 32px;
+    }
+
+    &__image {
+      display: block;
+      margin-top: -30%;
+    }
+  }
+}
+
+@include responsive("small") {
+  .logo {
+    margin-bottom: 48px;
+    padding: 0;
+
+    .container-fluid {
+      padding: 0;
+    }
+
+    &__text {
+      padding-left: 24px;
+    }
+
+    &__image {
+      margin-top: -48%;
+    }
+  }
+}

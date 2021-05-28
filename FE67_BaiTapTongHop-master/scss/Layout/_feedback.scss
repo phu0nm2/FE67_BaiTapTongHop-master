@@ -1,0 +1,135 @@
+.feedback {
+  padding: 76px 17px;
+
+  .feedback-content {
+    .feedback-item {
+      display: flex;
+      //   justify-content: center;
+      //   align-items: center;
+      &__left {
+        //
+      }
+      &__right {
+        width: 70%;
+        padding: 0 50px;
+      }
+      &__title {
+        display: flex;
+        padding-top: $pd-2;
+        h2 {
+          letter-spacing: 2px;
+          @include styleText($gray-color-2, $fs-2, $fw-bold-0);
+          padding-right: 10px;
+          border-right: 1px solid $gray-color-2;
+        }
+        img {
+          margin-left: 10px;
+          width: 140px;
+          height: 30px;
+        }
+      }
+      &__text {
+        // font-family: "Italianno", cursive;
+        font-family: italic;
+        @include styleText($green-color-3, $fs-4 - 6, $fw-bold-0);
+      }
+    }
+    .priv_arrow {
+      position: absolute;
+      display: inline-block;
+      z-index: 2;
+      text-align: center;
+      line-height: 50px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: white;
+      top: 45%;
+      left: 0;
+    }
+    .next_arrow {
+      position: absolute;
+      display: inline-block;
+      z-index: 2;
+      text-align: center;
+      line-height: 50px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: white;
+      top: 45%;
+      right: 0;
+    }
+  }
+}
+
+@include responsive("x-large") {
+  .feedback {
+    .feedback-content {
+      .feedback-item {
+        padding-left: $pd-1;
+        &__right {
+          padding: 0 15px;
+        }
+        &__title {
+          flex-direction: column;
+          h2 {
+            border: none;
+          }
+          img {
+            width: 100px;
+          }
+        }
+        &__text {
+          font-size: $fs-3;
+        }
+      }
+    }
+  }
+}
+
+@include responsive("medium") {
+  .feedback {
+    .feedback-content {
+      .feedback-item {
+        flex-direction: column;
+        text-align: justify;
+        &__right {
+          width: 100%;
+        }
+        &__text {
+          font-size: $fs-3;
+        }
+      }
+      .priv_arrow {
+        top: 25%;
+      }
+      .next_arrow {
+        top: 25%;
+      }
+    }
+  }
+}
+
+@include responsive("small") {
+  .feedback {
+    .feedback-content {
+      // .feedback-item {
+      //   flex-direction: column;
+      //   text-align: justify;
+      //   &__right {
+      //     width: 100%;
+      //   }
+      //   &__text {
+      //     font-size: $fs-3;
+      //   }
+      // }
+      .priv_arrow {
+        top: 13%;
+      }
+      .next_arrow {
+        top: 13%;
+      }
+    }
+  }
+}

@@ -1,5 +1,6 @@
 #cover {
   position: relative;
+  overflow-x: hidden;
   .cover-text__left {
     position: absolute;
     width: 100%;
@@ -124,6 +125,25 @@
     }
     .cover-content.slick-slider {
       display: none;
+    }
+  }
+}
+
+@include responsive("small") {
+  #cover {
+    height: 400px;
+    .cover-text__left {
+      top: -10%;
+
+      h1 {
+        font-size: $fs-4 - 8;
+      }
+      .cover-nav__search {
+        display: flex;
+        input {
+          max-width: 100%;
+        }
+      }
     }
   }
 }
