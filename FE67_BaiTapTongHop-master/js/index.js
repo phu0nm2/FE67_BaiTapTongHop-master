@@ -15,6 +15,26 @@ const handleHeader = () => {
 
 handleHeader();
 
+// Handle Sidebar
+const handleSidebar = () => {
+  const open = document.getElementById("openSidebar");
+  const close = document.getElementById("closeSidebar");
+  const sidebar = document.getElementById("sidebar");
+  const body = document.querySelector("body");
+
+  open.addEventListener("click", () => {
+    sidebar.classList.add("open");
+    body.classList.add("sidebarShow");
+  });
+
+  close.addEventListener("click", () => {
+    sidebar.classList.remove("open");
+    body.classList.remove("sidebarShow");
+  });
+};
+
+handleSidebar();
+
 // slick js cover
 $(function () {
   $(".cover-content").slick({

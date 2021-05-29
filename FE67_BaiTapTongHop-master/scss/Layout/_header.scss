@@ -334,6 +334,10 @@
 
 @include responsive("small") {
   .header-nav {
+    .container-fluid {
+      padding: 0 24px;
+    }
+
     &__logo {
       width: 100%;
       text-align: right;

@@ -1,0 +1,100 @@
+.sidebar {
+  &__overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: $black-color-0, $alpha: 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    z-index: 999;
+  }
+
+  &__content {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    padding: $pd-2;
+    background-color: $white-color-0;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+
+  &.open {
+    .sidebar__overlay {
+      opacity: 1;
+      visibility: visible;
+    }
+    .sidebar__content {
+      transform: translateX(0);
+    }
+  }
+
+  &__btn {
+    @include styleButton(
+      $pd-1 - 2,
+      $pd-2 + 6,
+      $green-color-0,
+      $green-color-0,
+      $border-radius
+    );
+    @include styleText($white-color-0, $fs-0, $fw-bold-1);
+    display: inline-block;
+    margin-bottom: $mg-2 - 5;
+    &:hover {
+      @include styleButtonHover($white-color-0, $green-color-1, $green-color-1);
+      text-decoration: none;
+    }
+  }
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  color: $gray-color-2;
+
+  &__link {
+    display: inline-block;
+    color: $gray-color-2;
+    margin-bottom: $mg-1;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      color: $gray-color-0;
+      text-decoration: none;
+    }
+    &.pro {
+      @include styleText($green-color-4, $fs-0, $fw-bold-0);
+      &:hover {
+        color: $green-color-4;
+      }
+    }
+    &.business {
+      @include styleText($green-color-0, $fs-0, $fw-bold-0);
+      &:hover {
+        color: $green-color-0;
+      }
+    }
+  }
+
+  .general {
+    margin: 30px 0 10px;
+    p {
+      @include styleText($black-color-1, $fs-0, $fw-bold-0);
+      padding-bottom: $pd-1;
+      border-bottom: 1px solid $gray-color-1;
+    }
+  }
+}
+
+.sidebar-cate__title,
+.sidebar-explore__title,
+.sidebar-language,
+.sidebar-currency {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $mg-1;
+  cursor: pointer;
+}
