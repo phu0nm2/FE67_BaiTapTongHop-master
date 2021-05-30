@@ -8,4 +8,7 @@ body {
   font-family: "Italianno", cursive;
   font-family: "Roboto", sans-serif;
   @include styleText($gray-color-0, ($fs-0), $fw-normal);
+  &.sidebarShow {
+    overflow-y: hidden;
+  }
 }

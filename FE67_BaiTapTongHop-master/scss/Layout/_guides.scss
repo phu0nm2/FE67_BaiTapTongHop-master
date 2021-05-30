@@ -1,0 +1,79 @@
+.guides {
+  padding: 0 17px;
+  margin: 96px 0;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    h2 {
+      @include styleText($black-color-1, 32px, $fw-bold-1);
+      margin-bottom: 0;
+    }
+  }
+
+  &__title a,
+  .guides-link-mobile {
+    color: $blue-color-2;
+    &:hover {
+      color: $blue-color-2;
+      text-decoration: none;
+    }
+    i {
+      margin-left: $mg-1;
+    }
+  }
+
+  .guides-link-mobile {
+    display: none;
+  }
+
+  &__item {
+    display: block;
+    img {
+      border-radius: $border-radius;
+      margin-bottom: $mg-1 + 6;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        opacity: 0.85;
+      }
+    }
+    h4 {
+      @include styleText($black-color-1, $fs-0 + 2, $fw-bold-1);
+      margin-bottom: $mg-0;
+    }
+    p {
+      @include styleText($gray-color-4, $fs-0 + 1, $fw-normal);
+      margin-bottom: 0;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+@include responsive("large") {
+  .guides {
+    &__title {
+      a {
+        display: none;
+      }
+    }
+
+    .guides-link-mobile {
+      display: inline-block;
+    }
+
+    &__item {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+@include responsive("small") {
+  .guides {
+    padding: 0 9px;
+    margin: 48px 0;
+  }
+}

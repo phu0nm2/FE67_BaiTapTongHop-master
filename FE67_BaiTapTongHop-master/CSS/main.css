@@ -57,6 +57,10 @@ body {
   font-weight: 400;
 }
 
+body.sidebarShow {
+  overflow-y: hidden;
+}
+
 #header {
   position: fixed;
   top: 0;
@@ -401,6 +405,9 @@ body {
 }
 
 @media screen and (max-width: 576px) {
+  .header-nav .container-fluid {
+    padding: 0 24px;
+  }
   .header-nav__logo {
     width: 100%;
     text-align: right;
@@ -426,6 +433,119 @@ body {
     color: #62646a;
     background-color: transparent;
   }
+}
+
+.sidebar__overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.sidebar__content {
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  padding: 20px;
+  background-color: #fff;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.open .sidebar__overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.sidebar.open .sidebar__content {
+  transform: translateX(0);
+}
+
+.sidebar__btn {
+  padding: 8px 26px;
+  background-color: #1dbf73;
+  border: 1px solid #1dbf73;
+  border-radius: 4px;
+  transition: all 0.2s linear;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.sidebar__btn:hover {
+  color: #fff;
+  background-color: #19a463;
+  border-color: #19a463;
+  text-decoration: none;
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  color: #95979d;
+}
+
+.sidebar-menu__link {
+  display: inline-block;
+  color: #95979d;
+  margin-bottom: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.sidebar-menu__link:hover {
+  color: #62646a;
+  text-decoration: none;
+}
+
+.sidebar-menu__link.pro {
+  color: #02c2a9;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.sidebar-menu__link.pro:hover {
+  color: #02c2a9;
+}
+
+.sidebar-menu__link.business {
+  color: #1dbf73;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.sidebar-menu__link.business:hover {
+  color: #1dbf73;
+}
+
+.sidebar-menu .general {
+  margin: 30px 0 10px;
+}
+
+.sidebar-menu .general p {
+  color: #404145;
+  font-size: 16px;
+  font-weight: 500;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dadbdd;
+}
+
+.sidebar-cate__title,
+.sidebar-explore__title,
+.sidebar-language,
+.sidebar-currency {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
 }
 
 #cover {
@@ -1254,6 +1374,7 @@ body {
   }
 }
 
+<<<<<<< HEAD
 .carousel {
   padding: 76px 34px;
   background: #fafafa;
@@ -1473,15 +1594,103 @@ body {
     max-width: 80%;
     top: 15%;
     left: 5%;
+=======
+.guides {
+  padding: 0 17px;
+  margin: 96px 0;
+}
+
+.guides__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.guides__title h2 {
+  color: #404145;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.guides__title a,
+.guides .guides-link-mobile {
+  color: #4a73e8;
+}
+
+.guides__title a:hover,
+.guides .guides-link-mobile:hover {
+  color: #4a73e8;
+  text-decoration: none;
+}
+
+.guides__title a i,
+.guides .guides-link-mobile i {
+  margin-left: 10px;
+}
+
+.guides .guides-link-mobile {
+  display: none;
+}
+
+.guides__item {
+  display: block;
+}
+
+.guides__item img {
+  border-radius: 4px;
+  margin-bottom: 16px;
+  transition: all 0.2s ease-in-out;
+}
+
+.guides__item img:hover {
+  opacity: 0.85;
+}
+
+.guides__item h4 {
+  color: #404145;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.guides__item p {
+  color: #7a7d85;
+  font-size: 17px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.guides__item:hover {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 992px) {
+  .guides__title a {
+    display: none;
+  }
+  .guides .guides-link-mobile {
+    display: inline-block;
+  }
+  .guides__item {
+    margin-bottom: 32px;
+>>>>>>> a899043b74d8a7fd98f481efb6a11e1305a83a02
   }
 }
 
 @media screen and (max-width: 576px) {
+<<<<<<< HEAD
   .signup .signup-text {
     max-width: 90%;
   }
   .signup .signup-text h1 {
     font-size: 32px;
+=======
+  .guides {
+    padding: 0 9px;
+    margin: 48px 0;
+>>>>>>> a899043b74d8a7fd98f481efb6a11e1305a83a02
   }
 }
 /*# sourceMappingURL=main.css.map */

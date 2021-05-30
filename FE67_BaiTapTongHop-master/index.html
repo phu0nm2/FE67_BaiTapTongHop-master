@@ -36,11 +36,11 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
 
-    <!-- MY CSS -->
-    <link rel="stylesheet" href="./CSS/main.css" />
-
     <!-- slick -->
     <link rel="stylesheet" href="./CSS/slick.css" />
+
+    <!-- MY CSS -->
+    <link rel="stylesheet" href="./CSS/main.css" />
   </head>
 
   <body>
@@ -50,7 +50,7 @@
         <div class="container-fluid">
           <div class="row">
             <div class="header-nav__left col-8 col-md-8 col-lg-5">
-              <div class="header-nav__bars">
+              <div class="header-nav__bars" id="openSidebar">
                 <i class="fa fa-bars"></i>
               </div>
               <a href="index.html" class="header-nav__logo">
@@ -570,6 +570,44 @@
     </header>
     <!-- End Header -->
 
+    <!-- Sidebar Start -->
+    <section class="sidebar" id="sidebar">
+      <div class="sidebar__overlay" id="closeSidebar"></div>
+      <div class="sidebar__content">
+        <a href="#" class="sidebar__btn">Join Fiverr</a>
+        <div class="sidebar-menu">
+          <a href="#" class="sidebar-menu__link">Sign in</a>
+          <div class="sidebar-cate">
+            <div class="sidebar-cate__title">
+              <span>Browse Categories</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+          <div class="sidebar-explore">
+            <div class="sidebar-explore__title">
+              <span>Explore</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+          <a href="#" class="sidebar-menu__link pro">Fiverr Pro</a>
+          <a href="#" class="sidebar-menu__link business">Fiverr Business</a>
+          <div class="general">
+            <p>General</p>
+          </div>
+          <a href="#" class="sidebar-menu__link">Home</a>
+          <div class="sidebar-language">
+            <span>English <i class="fas fa-globe"></i></span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="sidebar-currency">
+            <span>USD - $</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Sidebar -->
+
     <!-- Cover Start -->
     <section id="cover">
       <div class="cover-text__left">
@@ -828,7 +866,7 @@
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-body">
-              <video class="modal-video" autoplay controls preload="metadata">
+              <video class="modal-video" controls preload="metadata">
                 <source
                   src="https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/vmvv3czyk2ifedefkau7"
                   type="video/mp4"
@@ -1138,7 +1176,7 @@
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-body">
-              <video class="modal-video" autoplay controls preload="metadata">
+              <video class="modal-video" controls preload="metadata">
                 <source
                   src="https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/plfa6gdjihpdvr10rchl"
                   type="video/mp4"
@@ -1159,7 +1197,7 @@
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-body">
-              <video class="modal-video" autoplay controls preload="metadata">
+              <video class="modal-video" controls preload="metadata">
                 <source
                   src="https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/yja2ld5fnolhsixj3xxw"
                   type="video/mp4"
@@ -1180,7 +1218,7 @@
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-body">
-              <video class="modal-video" autoplay controls preload="metadata">
+              <video class="modal-video" controls preload="metadata">
                 <source
                   src="https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/bsncmkwya3nectkensun"
                   type="video/mp4"
@@ -1201,7 +1239,7 @@
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-body">
-              <video class="modal-video" autoplay controls preload="metadata">
+              <video class="modal-video" controls preload="metadata">
                 <source
                   src="https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/rb8jtakrisiz0xtsffwi"
                   type="video/mp4"
@@ -1414,7 +1452,54 @@
     <!-- End Carousel  -->
 
     <!-- Guides Start -->
-    <section id="guides"></section>
+    <section class="guides">
+      <div class="container-fluid">
+        <div class="guides__title">
+          <h2>Fiverr guides</h2>
+          <a href="#">See More Guides <i class="fa fa-angle-right"></i></a>
+        </div>
+        <div class="guides__content">
+          <div class="row">
+            <div class="col-12 col-sm-6 col-lg-4">
+              <a href="#" class="guides__item">
+                <img
+                  src="./img/guide-start-online-business-552-x2.png"
+                  alt="guide-start-online-business-552-x2.png"
+                  class="w-100 d-block"
+                />
+                <h4>Start an online business and work from home</h4>
+                <p>A complete guide to starting a small business online</p>
+              </a>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <a href="#" class="guides__item">
+                <img
+                  src="./img/guide-digital-marketing-552-x2.png"
+                  alt="guide-digital-marketing-552-x2.png"
+                  class="w-100 d-block"
+                />
+                <h4>Digital marketing made easy</h4>
+                <p>A practical guide to understand what is digital marketing</p>
+              </a>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+              <a href="#" class="guides__item">
+                <img
+                  src="./img/guide-create-a-logo-552-x2.png"
+                  alt="guide-create-a-logo-552-x2.png"
+                  class="w-100 d-block"
+                />
+                <h4>Create a logo for your business</h4>
+                <p>A step-by-step guide to create a memorable business logo</p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="guides-link-mobile">
+          See More Guides <i class="fa fa-angle-right"></i>
+        </a>
+      </div>
+    </section>
     <!-- End Guides -->
 
     <!--  Sign up Start -->
@@ -1456,9 +1541,9 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-
     <!-- slick js -->
     <script src="./js/slick.min.js"></script>
+    <!-- INDEX JS -->
     <script src="./js/index.js"></script>
   </body>
 </html>
