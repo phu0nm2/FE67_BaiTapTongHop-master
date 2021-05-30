@@ -1,0 +1,143 @@
+.carousel {
+  padding: 76px 34px;
+  background: $white-color-1;
+  .carousel-title {
+    display: flex;
+    justify-content: space-between;
+    &__left {
+      @include styleText($black-color-0, $fs-4 - 8, $fw-bold);
+    }
+
+    &__right {
+      font-size: $fs-0;
+      text-decoration: none;
+      padding-right: 34px;
+      i {
+        font-size: $fs-1 - 2;
+      }
+      &:hover {
+        color: #007bff;
+      }
+    }
+  }
+
+  .carousel-content {
+    .carousel-item {
+      display: inline-block;
+      margin: 10px 10px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      border-radius: 0 0 5px 5px;
+      img {
+        width: 100%;
+        height: 237px;
+        border-radius: 5px 5px 0 0;
+      }
+      .carousel-text {
+        display: flex;
+
+        align-items: center;
+        background: $white-color-0;
+        padding: 5px 10px;
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+        }
+        &__right {
+          display: flex;
+          flex-direction: column;
+          padding: $pd-1;
+          a {
+            &:hover {
+              color: #007bff;
+            }
+            &:first-child {
+              text-decoration: none;
+              @include styleText($black-color-0, $fs-1, $fw-bold);
+            }
+            &:last-child {
+              text-decoration: none;
+              @include styleText($gray-color-2, $fs-1, $fw-normal);
+            }
+          }
+        }
+      }
+    }
+    .slick-slide {
+      padding-bottom: 8px;
+    }
+    .priv_arrow {
+      position: absolute;
+      display: inline-block;
+      z-index: 2;
+      text-align: center;
+      line-height: 50px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: white;
+      top: 30%;
+      left: -1%;
+    }
+    .next_arrow {
+      position: absolute;
+      display: inline-block;
+      z-index: 2;
+      text-align: center;
+      line-height: 50px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: white;
+      top: 30%;
+      right: 0;
+    }
+  }
+}
+
+@include responsive("x-large") {
+  .carousel {
+    .carousel-title {
+      .carousel-title__left {
+        padding-right: 300px;
+      }
+      .carousel-title__right {
+        position: absolute;
+        top: 20%;
+        right: 0;
+      }
+    }
+  }
+}
+
+@include responsive("medium") {
+  .carousel {
+    .carousel-title {
+      .carousel-title__left {
+        padding-right: 0;
+      }
+      .carousel-title__right {
+        position: absolute;
+        top: 90%;
+        left: 5%;
+      }
+    }
+  }
+}
+@include responsive("small") {
+  .carousel {
+    .carousel-title {
+      .carousel-title__left {
+        font-size: $fs-3 + 4;
+      }
+      .carousel-title__right {
+        position: absolute;
+        top: 90%;
+        left: 8%;
+      }
+    }
+    .carousel-content {
+      margin-left: -10px;
+    }
+  }
+}

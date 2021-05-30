@@ -81,30 +81,44 @@ $(function () {
     speed: 300,
     slidesToShow: 1,
     slidesToScroll: 1,
-    // responsive: [
-    //   {
-    //     breakpoint: 1200,
-    //     settings: {
-    //       slidesToShow: 3,
-    //       slidesToScroll: 3,
-    //       infinite: true,
-    //       dots: true,
-    //     },
-    //   },
-    //   {
-    //     breakpoint: 992,
-    //     settings: {
-    //       slidesToShow: 2,
-    //       slidesToScroll: 2,
-    //     },
-    //   },
-    //   {
-    //     breakpoint: 576,
-    //     settings: {
-    //       slidesToShow: 1,
-    //       slidesToScroll: 1,
-    //     },
-    //   },
-    // ],
+  });
+});
+
+// slick js carousel
+$(function () {
+  $(".carousel-content").slick({
+    infinite: true,
+    dots: false,
+    arrows: true,
+    prevArrow:
+      '<span class="priv_arrow"><i class="fas fa-chevron-left"></i></span>',
+    nextArrow:
+      '<span class="next_arrow"><i class="fas fa-chevron-right"></i></span>',
+    speed: 300,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   });
 });

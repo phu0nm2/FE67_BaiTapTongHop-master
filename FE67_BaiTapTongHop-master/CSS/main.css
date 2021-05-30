@@ -1253,4 +1253,235 @@ body {
     margin-top: -48%;
   }
 }
+
+.carousel {
+  padding: 76px 34px;
+  background: #fafafa;
+}
+
+.carousel .carousel-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.carousel .carousel-title__left {
+  color: #000;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.carousel .carousel-title__right {
+  font-size: 16px;
+  text-decoration: none;
+  padding-right: 34px;
+}
+
+.carousel .carousel-title__right i {
+  font-size: 12px;
+}
+
+.carousel .carousel-title__right:hover {
+  color: #007bff;
+}
+
+.carousel .carousel-content .carousel-item {
+  display: inline-block;
+  margin: 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 0 0 5px 5px;
+}
+
+.carousel .carousel-content .carousel-item img {
+  width: 100%;
+  height: 237px;
+  border-radius: 5px 5px 0 0;
+}
+
+.carousel .carousel-content .carousel-item .carousel-text {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 5px 10px;
+}
+
+.carousel .carousel-content .carousel-item .carousel-text img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.carousel .carousel-content .carousel-item .carousel-text__right {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.carousel .carousel-content .carousel-item .carousel-text__right a:hover {
+  color: #007bff;
+}
+
+.carousel .carousel-content .carousel-item .carousel-text__right a:first-child {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.carousel .carousel-content .carousel-item .carousel-text__right a:last-child {
+  text-decoration: none;
+  color: #95979d;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.carousel .carousel-content .slick-slide {
+  padding-bottom: 8px;
+}
+
+.carousel .carousel-content .priv_arrow {
+  position: absolute;
+  display: inline-block;
+  z-index: 2;
+  text-align: center;
+  line-height: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: white;
+  top: 30%;
+  left: -1%;
+}
+
+.carousel .carousel-content .next_arrow {
+  position: absolute;
+  display: inline-block;
+  z-index: 2;
+  text-align: center;
+  line-height: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: white;
+  top: 30%;
+  right: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .carousel .carousel-title .carousel-title__left {
+    padding-right: 300px;
+  }
+  .carousel .carousel-title .carousel-title__right {
+    position: absolute;
+    top: 20%;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .carousel .carousel-title .carousel-title__left {
+    padding-right: 0;
+  }
+  .carousel .carousel-title .carousel-title__right {
+    position: absolute;
+    top: 90%;
+    left: 5%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .carousel .carousel-title .carousel-title__left {
+    font-size: 28px;
+  }
+  .carousel .carousel-title .carousel-title__right {
+    position: absolute;
+    top: 90%;
+    left: 8%;
+  }
+  .carousel .carousel-content {
+    margin-left: -10px;
+  }
+}
+
+.signup {
+  padding: 76px 17px;
+  position: relative;
+}
+
+.signup .signup-bg img {
+  width: 100%;
+  height: 440px;
+}
+
+.signup .signup-bg img:last-child {
+  display: none;
+}
+
+.signup .signup-text {
+  position: absolute;
+  width: 100%;
+  max-width: 44%;
+  top: 35%;
+  left: 10%;
+}
+
+.signup .signup-text h1 {
+  letter-spacing: 1px;
+  padding-bottom: 20px;
+  color: #fff;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.signup .signup-text h1 i {
+  font-weight: normal;
+}
+
+.signup .signup-text h1 i:last-child {
+  font-family: italic;
+}
+
+@media screen and (max-width: 1024px) {
+  .signup .signup-bg img {
+    width: 100%;
+    height: 350px;
+  }
+  .signup .signup-bg img:first-child {
+    display: none;
+  }
+  .signup .signup-bg img:last-child {
+    display: block;
+  }
+  .signup .signup-text {
+    left: 7%;
+    max-width: 55%;
+  }
+  .signup .signup-text h1 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .signup {
+    margin: 76px 34px;
+    background: #45091b;
+    height: 300px;
+  }
+  .signup .signup-bg img:first-child, .signup .signup-bg img:last-child {
+    display: none;
+  }
+  .signup .signup-text {
+    max-width: 80%;
+    top: 15%;
+    left: 5%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .signup .signup-text {
+    max-width: 90%;
+  }
+  .signup .signup-text h1 {
+    font-size: 32px;
+  }
+}
 /*# sourceMappingURL=main.css.map */
