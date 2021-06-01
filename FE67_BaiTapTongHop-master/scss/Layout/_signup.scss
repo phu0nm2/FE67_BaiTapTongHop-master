@@ -1,0 +1,87 @@
+.signup {
+  padding: 76px 17px;
+  position: relative;
+  .signup-bg {
+    img {
+      width: 100%;
+      height: 440px;
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+  .signup-text {
+    position: absolute;
+    width: 100%;
+    max-width: 44%;
+    top: 35%;
+    left: 10%;
+    h1 {
+      letter-spacing: 1px;
+      padding-bottom: $pd-2;
+      @include styleText($white-color-0, $fs-3 + $fs-3, $fw-bold);
+      i {
+        font-weight: normal;
+        &:last-child {
+          font-family: italic;
+        }
+      }
+    }
+  }
+}
+
+@include responsive("x-large") {
+  .signup {
+    .signup-bg {
+      img {
+        width: 100%;
+        height: 350px;
+        &:first-child {
+          display: none;
+        }
+        &:last-child {
+          display: block;
+        }
+      }
+    }
+    .signup-text {
+      left: 7%;
+      max-width: 55%;
+      h1 {
+        font-size: $pd-2 + $pd-2;
+      }
+    }
+  }
+}
+
+@include responsive("medium") {
+  .signup {
+    margin: 76px 34px;
+    background: #45091b;
+    height: 300px;
+    .signup-bg {
+      img {
+        &:first-child,
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+    .signup-text {
+      max-width: 80%;
+      top: 15%;
+      left: 5%;
+    }
+  }
+}
+
+@include responsive("small") {
+  .signup {
+    .signup-text {
+      max-width: 90%;
+      h1 {
+        font-size: $fs-0 + $fs-0;
+      }
+    }
+  }
+}
