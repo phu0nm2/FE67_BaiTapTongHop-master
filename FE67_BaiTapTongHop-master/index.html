@@ -571,23 +571,45 @@
     <!-- End Header -->
 
     <!-- Sidebar Start -->
-    <section class="sidebar" id="sidebar">
+    <div class="sidebar" id="sidebar">
       <div class="sidebar__overlay" id="closeSidebar"></div>
       <div class="sidebar__content">
         <a href="#" class="sidebar__btn">Join Fiverr</a>
         <div class="sidebar-menu">
           <a href="#" class="sidebar-menu__link">Sign in</a>
-          <div class="sidebar-cate">
-            <div class="sidebar-cate__title">
+          <div class="sidebar-dropdown">
+            <div class="sidebar-dropdown__title">
               <span>Browse Categories</span>
               <i class="fas fa-chevron-down"></i>
             </div>
+            <ul class="dropdown__content" style="height: 0px">
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Graphics & Design</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Digital Marketing</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Writing & Translation</a>
+              </li>
+            </ul>
           </div>
-          <div class="sidebar-explore">
-            <div class="sidebar-explore__title">
+          <div class="sidebar-dropdown">
+            <div class="sidebar-dropdown__title">
               <span>Explore</span>
               <i class="fas fa-chevron-down"></i>
             </div>
+            <ul class="dropdown__content" style="height: 0px">
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Discover</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Guides</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Learn</a>
+              </li>
+            </ul>
           </div>
           <a href="#" class="sidebar-menu__link pro">Fiverr Pro</a>
           <a href="#" class="sidebar-menu__link business">Fiverr Business</a>
@@ -595,17 +617,47 @@
             <p>General</p>
           </div>
           <a href="#" class="sidebar-menu__link">Home</a>
-          <div class="sidebar-language">
-            <span>English <i class="fas fa-globe"></i></span>
-            <i class="fas fa-chevron-down"></i>
+          <div class="sidebar-dropdown language">
+            <div class="sidebar-dropdown__title">
+              <span>English <i class="fas fa-globe"></i></span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <ul class="dropdown__content" style="height: 0px">
+              <li class="dropdown__item active">
+                <a href="#" class="dropdown__link">
+                  <i class="fa fa-check"></i> English
+                </a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Deutsch</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">Español</a>
+              </li>
+            </ul>
           </div>
-          <div class="sidebar-currency">
-            <span>USD - $</span>
-            <i class="fas fa-chevron-down"></i>
+          <div class="sidebar-dropdown currency">
+            <div class="sidebar-dropdown__title">
+              <span>USD - $</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <ul class="dropdown__content" style="height: 0px">
+              <li class="dropdown__item active">
+                <a href="#" class="dropdown__link">
+                  <i class="fa fa-check"></i> USD - $
+                </a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">EUR - €</a>
+              </li>
+              <li class="dropdown__item">
+                <a href="#" class="dropdown__link">GBP - £</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-    </section>
+    </div>
     <!-- End Sidebar -->
 
     <!-- Cover Start -->
@@ -1385,7 +1437,167 @@
     <!-- End Sign up  -->
 
     <!-- Footer Start -->
-    <section id="footer"></section>
+    <section class="footer">
+      <div class="container-fluid">
+        <div class="footer-top">
+          <div class="footer-top__item">
+            <div class="footer-top__title">
+              <h4>Categories</h4>
+              <i class="fa fa-chevron-down"></i>
+            </div>
+            <ul class="footer-top__links">
+              <li>
+                <a href="#">Graphics & Design</a>
+              </li>
+              <li>
+                <a href="#">Digital Marketing</a>
+              </li>
+              <li>
+                <a href="#">Writing & Translation</a>
+              </li>
+              <li>
+                <a href="#">Video & Animation</a>
+              </li>
+              <li>
+                <a href="#">Music & Audio</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-top__item">
+            <div class="footer-top__title">
+              <h4>About</h4>
+              <i class="fa fa-chevron-down"></i>
+            </div>
+            <ul class="footer-top__links">
+              <li>
+                <a href="#">Careers</a>
+              </li>
+              <li>
+                <a href="#">Press & News</a>
+              </li>
+              <li>
+                <a href="#">Partnerships</a>
+              </li>
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-top__item">
+            <div class="footer-top__title">
+              <h4>Support</h4>
+              <i class="fa fa-chevron-down"></i>
+            </div>
+            <ul class="footer-top__links">
+              <li>
+                <a href="#">Help & Support</a>
+              </li>
+              <li>
+                <a href="#">Trust & Safety</a>
+              </li>
+              <li>
+                <a href="#">Selling on Fiverr</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-top__item">
+            <div class="footer-top__title">
+              <h4>Community</h4>
+              <i class="fa fa-chevron-down"></i>
+            </div>
+            <ul class="footer-top__links">
+              <li>
+                <a href="#">Events</a>
+              </li>
+              <li>
+                <a href="#">Blog</a>
+              </li>
+              <li>
+                <a href="#">Forum</a>
+              </li>
+              <li>
+                <a href="#">Community Standards</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-top__item">
+            <div class="footer-top__title">
+              <h4>More From Fiverr</h4>
+              <i class="fa fa-chevron-down"></i>
+            </div>
+            <div class="footer-top__links">
+              <li>
+                <a href="#">Fiverr Business</a>
+              </li>
+              <li>
+                <a href="#">Fiverr Pro</a>
+              </li>
+              <li>
+                <a href="#">Fiverr Studios</a>
+              </li>
+              <li>
+                <a href="#">Fiverr Logo Maker</a>
+              </li>
+              <li>
+                <a href="#">Fiverr Guides</a>
+              </li>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-bottom__left">
+            <svg
+              width="91"
+              height="27"
+              viewBox="0 0 91 27"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g fill="#7A7D85">
+                <path
+                  d="m82.9 13.1h-3.2c-2.1 0-3.2 1.5-3.2 4.1v9.3h-6.1v-13.4h-2.6c-2.1 0-3.2 1.5-3.2 4.1v9.3h-6.1v-18.4h6.1v2.8c1-2.2 2.4-2.8 4.4-2.8h7.4v2.8c1-2.2 2.4-2.8 4.4-2.8h2v5zm-25.6 5.6h-12.6c.3 2.1 1.6 3.2 3.8 3.2 1.6 0 2.8-.7 3.1-1.8l5.4 1.5c-1.3 3.2-4.6 5.1-8.5 5.1-6.6 0-9.6-5.1-9.6-9.5 0-4.3 2.6-9.4 9.2-9.4 7 0 9.3 5.2 9.3 9.1 0 .9 0 1.4-.1 1.8zm-5.9-3.5c-.1-1.6-1.3-3-3.3-3-1.9 0-3.1.8-3.4 3zm-23.1 11.3h5.3l6.7-18.3h-6.1l-3.2 10.7-3.4-10.8h-6.1zm-24.9 0h6v-13.4h5.7v13.4h6v-18.4h-11.6v-1.1c0-1.2.9-2 2.3-2h3.5v-5h-4.4c-4.5 0-7.5 2.7-7.5 6.6v1.5h-3.4v5h3.4z"
+                ></path>
+              </g>
+              <g fill="#7A7D85">
+                <path
+                  d="m90.4 23.3c0 2.1-1.6 3.7-3.8 3.7s-3.8-1.6-3.8-3.7 1.6-3.7 3.8-3.7c2.2-.1 3.8 1.5 3.8 3.7zm-.7 0c0-1.8-1.3-3.1-3.1-3.1s-3.1 1.3-3.1 3.1 1.3 3.1 3.1 3.1 3.1-1.4 3.1-3.1zm-1.7.8.1.9h-.7l-.1-.9c0-.3-.2-.5-.5-.5h-.8v1.4h-.7v-3.5h1.4c.7 0 1.2.4 1.2 1.1 0 .4-.2.6-.5.8.4.1.5.3.6.7zm-1.9-1h.7c.4 0 .5-.3.5-.5 0-.3-.2-.5-.5-.5h-.7z"
+                ></path>
+              </g>
+            </svg>
+            <p>&copy; Fiverr International Ltd. 2021</p>
+          </div>
+          <div class="footer-bottom__right">
+            <div class="footer-bottom__social">
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-pinterest"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+            <div class="footer-bottom__setting">
+              <button class="language">
+                <i class="fas fa-globe"></i>
+                English
+              </button>
+              <button class="currency">$ USD</button>
+              <div class="accessibility">
+                <i class="fas fa-male"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- End Footer  -->
 
     <!-- Optional JavaScript -->
@@ -1403,6 +1615,11 @@
     <script
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
     <!-- slick js -->

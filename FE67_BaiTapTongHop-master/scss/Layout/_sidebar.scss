@@ -13,7 +13,7 @@
 
   &__content {
     position: fixed;
-    width: 300px;
+    width: 260px;
     height: 100%;
     padding: $pd-2;
     background-color: $white-color-0;
@@ -54,11 +54,18 @@
   display: flex;
   flex-direction: column;
   color: $gray-color-2;
+  & > * {
+    padding-bottom: $pd-1 + 5;
+    background-color: $white-color-0;
+  }
+
+  & > :last-child {
+    padding-bottom: 100%;
+  }
 
   &__link {
     display: inline-block;
     color: $gray-color-2;
-    margin-bottom: $mg-1;
     transition: all 0.2s ease-in-out;
     &:hover {
       color: $gray-color-0;
@@ -79,22 +86,66 @@
   }
 
   .general {
-    margin: 30px 0 10px;
+    padding: 30px 0 10px;
     p {
       @include styleText($black-color-1, $fs-0, $fw-bold-0);
       padding-bottom: $pd-1;
       border-bottom: 1px solid $gray-color-1;
+      margin-bottom: 0;
     }
   }
 }
 
-.sidebar-cate__title,
-.sidebar-explore__title,
-.sidebar-language,
-.sidebar-currency {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: $mg-1;
-  cursor: pointer;
+.sidebar-dropdown {
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    i {
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  .dropdown__content {
+    width: 100%;
+    list-style: none;
+    overflow: hidden;
+    margin-bottom: 0;
+    transition: all 0.3s ease-in-out;
+    .dropdown__item {
+      padding: $pd-0 0 $pd-0 $pd-2;
+    }
+
+    .dropdown__link {
+      color: $gray-color-2;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &.language,
+  &.currency {
+    .dropdown__item.active {
+      padding-left: 0;
+    }
+    .dropdown__item {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+    }
+    .dropdown__item:hover {
+      background-color: $gray-color-6;
+    }
+  }
+
+  &.open {
+    .sidebar-dropdown__title > i {
+      transform: rotate(-180deg);
+    }
+    .dropdown__content.active {
+      overflow: unset;
+      margin-top: $mg-1;
+    }
+  }
 }

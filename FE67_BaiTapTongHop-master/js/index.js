@@ -35,6 +35,45 @@ const handleSidebar = () => {
 
 handleSidebar();
 
+const handleSidebarDropdown = () => {
+  const dropdownTitle = document.querySelectorAll(
+    ".sidebar-menu .sidebar-dropdown__title"
+  );
+
+  dropdownTitle.forEach((title) => {
+    title.addEventListener("click", () => {
+      const dropdown = title.parentElement;
+      const dropdownContent = dropdown.querySelector(".dropdown__content");
+
+      dropdown.classList.toggle("open");
+      if (dropdownContent.classList.toggle("active")) {
+        const dropdownItems =
+          dropdownContent.querySelectorAll(".dropdown__item");
+        const newHeightContent =
+          dropdownItems[0].clientHeight * dropdownItems.length;
+
+        dropdownContent.style.height = `${newHeightContent}px`;
+      } else {
+        dropdownContent.style.height = "0px";
+      }
+    });
+  });
+};
+handleSidebarDropdown();
+
+// Handle footer
+$(() => {
+  $(".footer-top__item").click((e) => {
+    const content = e.currentTarget.querySelector(".footer-top__links");
+    if (e.currentTarget.classList.toggle("active")) {
+      $(content).slideDown();
+    } else {
+      $(content).slideUp();
+      setTimeout(() => content.setAttribute("style", ""), 500);
+    }
+  });
+});
+
 // slick js cover
 $(function () {
   $(".cover-content").slick({
