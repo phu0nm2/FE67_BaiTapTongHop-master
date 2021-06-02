@@ -78,6 +78,8 @@
       background: white;
       top: 30%;
       left: -1%;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+      cursor: pointer;
     }
     .next_arrow {
       position: absolute;
@@ -90,7 +92,9 @@
       border-radius: 50%;
       background: white;
       top: 30%;
-      right: 0;
+      right: -1%;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+      cursor: pointer;
     }
   }
 }

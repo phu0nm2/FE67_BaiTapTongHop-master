@@ -45,7 +45,7 @@
   padding: $pd-2 0;
   border-bottom: 1px solid $gray-color-3;
   background-color: $white-color-0;
-  transition: all 0.2s linear;
+  transition: all 0.3s ease;
   .container-fluid {
     padding: 0 ($pd-2 + 10);
   }
@@ -72,7 +72,7 @@
     margin-right: $mg-2 + 10;
     svg g:first-child {
       fill: $black-color-1;
-      transition: all 0.2s linear;
+      transition: all 0.3s ease;
     }
     svg g:last-child {
       fill: $green-color-0;
@@ -83,7 +83,7 @@
     position: relative;
     flex: 1;
     display: flex;
-    transition: all 0.2s linear;
+    transition: all 0.3s ease;
 
     input {
       @include styleText($black-color-1, ($fs-1 + 1), $fw-bold-0);
@@ -94,7 +94,7 @@
       border-right: none;
       border-top-left-radius: $border-radius;
       border-bottom-left-radius: $border-radius;
-      transition: all 0.2s linear;
+      transition: all 0.3s ease;
     }
     input:hover,
     input:focus {
@@ -120,7 +120,7 @@
       border: none;
       border-top-right-radius: $border-radius;
       border-bottom-right-radius: $border-radius;
-      transition: all 0.2s linear;
+      transition: all 0.3s ease;
     }
     button:focus {
       outline: none;
@@ -148,7 +148,7 @@
 
   &__link {
     @include styleText($gray-color-0, $fs-0, $fw-bold-0);
-    transition: all 0.2s linear;
+    transition: all 0.3s ease;
     &:hover {
       text-decoration: none;
       color: $green-color-0;
@@ -176,7 +176,7 @@
 .header-cate {
   border-bottom: 1px solid $gray-color-3;
   background-color: $white-color-0;
-  transition: all 0.2s linear;
+  transition: all 0.3s ease;
 
   .container-fluid {
     padding: 0 ($pd-2 + 5);
@@ -220,7 +220,7 @@
       height: 3px;
       background-color: $green-color-0;
       opacity: 0;
-      transition: all 0.2s linear;
+      transition: all 0.3s ease;
     }
   }
 }
@@ -274,7 +274,7 @@
   &__link {
     display: inline-block;
     color: $gray-color-0;
-    transition: all 0.2s linear;
+    transition: all 0.3s ease;
     &:hover {
       color: $gray-color-4;
       text-decoration: none;

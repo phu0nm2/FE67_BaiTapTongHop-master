@@ -133,6 +133,10 @@
   .footer-top {
     grid-template-columns: repeat(1, 1fr);
 
+    &__item {
+      cursor: pointer;
+    }
+
     &__item.active {
       .footer-top__title > i {
         transform: rotate(-180deg);
