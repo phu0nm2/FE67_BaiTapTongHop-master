@@ -61,7 +61,7 @@ body.sidebarShow {
   overflow-y: hidden;
 }
 
-#header {
+#headerHome {
   position: fixed;
   top: 0;
   left: 0;
@@ -69,38 +69,38 @@ body.sidebarShow {
   z-index: 5;
 }
 
-#header.header-transparent .header-nav {
+#headerHome.header-transparent .header-nav {
   border-bottom-color: transparent;
   background-color: transparent;
 }
 
-#header.header-transparent .header-nav__bars {
+#headerHome.header-transparent .header-nav__bars {
   color: #fff;
 }
 
-#header.header-transparent .header-nav__logo g:first-child {
+#headerHome.header-transparent .header-nav__logo g:first-child {
   fill: #fff;
 }
 
-#header.header-transparent .header-nav__search {
+#headerHome.header-transparent .header-nav__search {
   opacity: 0;
   visibility: hidden;
 }
 
-#header.header-transparent .header-nav__link {
+#headerHome.header-transparent .header-nav__link {
   color: #fff;
 }
 
-#header.header-transparent .header-nav__join {
+#headerHome.header-transparent .header-nav__join {
   color: #fff;
   border-color: #fff;
 }
 
-#header.header-transparent .header-nav__join:hover {
+#headerHome.header-transparent .header-nav__join:hover {
   border-color: #1dbf73;
 }
 
-#header.header-transparent .header-cate {
+#headerHome.header-transparent .header-cate {
   opacity: 0;
   visibility: hidden;
   background-color: transparent;
@@ -239,6 +239,14 @@ body.sidebarShow {
   color: #1dbf73;
 }
 
+.header-nav__link.pro {
+  color: #02c2a9;
+}
+
+.header-nav__link.pro:hover {
+  color: #28ccb7;
+}
+
 .header-nav__join {
   padding: 5px 20px;
   background-color: transparent;
@@ -254,6 +262,20 @@ body.sidebarShow {
   text-decoration: none;
   color: #fff;
   background-color: #19a463;
+}
+
+.header-nav .search-mobile {
+  display: none;
+  margin-top: 20px;
+}
+
+.header-nav .search-mobile input {
+  border-right: 1px solid #dadbdd;
+  border-radius: 4px;
+}
+
+.header-nav .search-mobile input:hover, .header-nav .search-mobile input:focus {
+  border-right-color: #95979d;
 }
 
 .header-cate {
@@ -402,6 +424,9 @@ body.sidebarShow {
   .header-nav__item.business, .header-nav__item.explore, .header-nav__item.seller {
     display: none;
   }
+  .header-nav__link.pro {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -433,6 +458,18 @@ body.sidebarShow {
     color: #62646a;
     background-color: transparent;
   }
+  .header-nav .search-mobile {
+    display: block;
+  }
+}
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
 }
 
 .sidebar__overlay {
@@ -456,6 +493,10 @@ body.sidebarShow {
   transform: translateX(-100%);
   transition: all 0.3s ease;
   z-index: 1000;
+}
+
+.sidebar.open {
+  z-index: 999;
 }
 
 .sidebar.open .sidebar__overlay {
@@ -1590,7 +1631,7 @@ body.sidebarShow {
 
 .guides {
   padding: 0 17px;
-  margin: 96px 0;
+  margin: 96px 0 0;
 }
 
 .guides__title {
@@ -1674,7 +1715,7 @@ body.sidebarShow {
 @media screen and (max-width: 576px) {
   .guides {
     padding: 0 9px;
-    margin: 48px 0;
+    margin: 48px 0 0;
   }
 }
 
@@ -1941,6 +1982,98 @@ body.sidebarShow {
   .footer-bottom__social {
     margin-bottom: 10px;
     margin-right: 0;
+  }
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+}
+
+.hero video {
+  width: 100%;
+}
+
+.hero__text {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translateY(-50%);
+}
+
+.hero__text h1 {
+  color: #fff;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.hero__text p {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 400;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.hero__btn {
+  padding: 11px 39px;
+  background-color: #1dbf73;
+  border: 1px solid #1dbf73;
+  border-radius: 4px;
+  transition: all 0.2s linear;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.hero__btn:hover {
+  color: #fff;
+  background-color: #3fca89;
+  border-color: #3fca89;
+  text-decoration: none;
+}
+
+.hero-stats {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 25px 0;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.hero-stats__item p {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.hero-stats__item h4 {
+  color: #fff;
+  font-size: 45px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 992px) {
+  .hero-stats {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hero__text h1 {
+    font-size: 36px;
+  }
+  .hero__text p {
+    font-size: 16px;
+  }
+  .hero__btn {
+    font-size: 14px;
+    margin-top: 5px;
   }
 }
 /*# sourceMappingURL=main.css.map */

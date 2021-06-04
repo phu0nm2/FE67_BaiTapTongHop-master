@@ -1,6 +1,6 @@
 .guides {
   padding: 0 17px;
-  margin: 96px 0;
+  margin: 96px 0 0;
 
   &__title {
     display: flex;
@@ -74,6 +74,6 @@
 @include responsive("small") {
   .guides {
     padding: 0 9px;
-    margin: 48px 0;
+    margin: 48px 0 0;
   }
 }

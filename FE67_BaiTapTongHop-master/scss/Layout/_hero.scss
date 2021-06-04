@@ -1,0 +1,82 @@
+.hero {
+  position: relative;
+  width: 100%;
+
+  video {
+    width: 100%;
+  }
+
+  &__text {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-50%);
+    h1 {
+      @include styleText($white-color-0, 50px, $fw-bold-1);
+    }
+    p {
+      @include styleText($white-color-0, $fs-3, $fw-normal);
+      margin-top: $mg-0;
+      margin-bottom: $mg-1 + 5;
+    }
+  }
+
+  &__btn {
+    @include styleButton(
+      11px,
+      39px,
+      $green-color-0,
+      $green-color-0,
+      $border-radius
+    );
+    @include styleText($white-color-0, $fs-0, $fw-bold-1);
+    display: inline-block;
+    margin-top: $mg-1 + 5;
+    &:hover {
+      @include styleButtonHover($white-color-0, $green-color-5, $green-color-5);
+      text-decoration: none;
+    }
+  }
+}
+
+.hero-stats {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: ($pd-2 + 5) 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  &__item {
+    p {
+      @include styleText($white-color-0, $fs-3, $fw-normal);
+      margin-bottom: 0;
+    }
+    h4 {
+      @include styleText($white-color-0, 45px, $fw-normal);
+      margin-bottom: 0;
+    }
+  }
+}
+
+@include responsive("large") {
+  .hero-stats {
+    display: none;
+  }
+}
+
+@include responsive("small") {
+  .hero {
+    &__text {
+      h1 {
+        font-size: 36px;
+      }
+      p {
+        font-size: $fs-0;
+      }
+    }
+    &__btn {
+      font-size: $fs-1;
+      margin-top: $mg-0;
+    }
+  }
+}

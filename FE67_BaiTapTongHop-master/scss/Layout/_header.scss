@@ -1,4 +1,4 @@
-#header {
+#headerHome {
   position: fixed;
   top: 0;
   left: 0;
@@ -7,7 +7,7 @@
 }
 
 // HEADER-TRANSPARENT
-#header.header-transparent {
+#headerHome.header-transparent {
   .header-nav {
     border-bottom-color: transparent;
     background-color: transparent;
@@ -153,6 +153,12 @@
       text-decoration: none;
       color: $green-color-0;
     }
+    &.pro {
+      color: $green-color-4;
+      &:hover {
+        color: $green-color-6;
+      }
+    }
   }
 
   &__join {
@@ -168,6 +174,19 @@
       text-decoration: none;
       color: $white-color-0;
       background-color: $green-color-1;
+    }
+  }
+
+  .search-mobile {
+    display: none;
+    margin-top: 20px;
+    input {
+      border-right: 1px solid $gray-color-1;
+      border-radius: $border-radius;
+      &:hover,
+      &:focus {
+        border-right-color: $gray-color-2;
+      }
     }
   }
 }
@@ -329,6 +348,9 @@
         display: none;
       }
     }
+    &__link.pro {
+      display: none;
+    }
   }
 }
 
@@ -365,6 +387,10 @@
         color: $gray-color-0;
         background-color: transparent;
       }
+    }
+
+    .search-mobile {
+      display: block;
     }
   }
 }

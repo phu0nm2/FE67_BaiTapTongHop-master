@@ -1,6 +1,6 @@
 // Handle Header
 const handleHeader = () => {
-  const header = document.getElementById("header");
+  const header = document.getElementById("headerHome");
   if (header) {
     document.addEventListener("scroll", () => {
       let heightScreen = pageYOffset;
