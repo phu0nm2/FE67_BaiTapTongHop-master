@@ -643,7 +643,7 @@ body.sidebarShow {
   position: absolute;
   width: 100%;
   max-width: 50%;
-  top: 15%;
+  top: 10%;
   left: -8%;
   transform: translate(20%, 50%);
   z-index: 2;
@@ -744,7 +744,7 @@ body.sidebarShow {
   .cover-text__left .cover-btn__search {
     display: block;
   }
-  .cover-text__courses {
+  .cover-text__left .cover-text__courses {
     max-width: 90%;
   }
 }
@@ -758,6 +758,9 @@ body.sidebarShow {
     color: #fff;
     font-size: 40px;
     font-weight: bold;
+  }
+  #cover .cover-content .styleImg2 {
+    display: block;
   }
 }
 
@@ -1089,6 +1092,11 @@ body.sidebarShow {
 .marketplace .marketplace-content .marketplace-item:hover p::before {
   transform: scaleX(2) translateX(25%);
   background: #1dbf73;
+}
+
+.marketplace .marketplace-content .marketplace-item:last-child {
+  padding-top: 16px;
+  place-self: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -1816,6 +1824,12 @@ body.sidebarShow {
   grid-template-columns: repeat(5, 1fr);
 }
 
+.footer-top__links a p {
+  color: #95979d;
+  font-size: 14px;
+  font-weight: 400;
+}
+
 .footer-top__title {
   display: flex;
   align-items: center;
@@ -1978,6 +1992,12 @@ body.sidebarShow {
   }
   .footer-bottom__right {
     flex-direction: column;
+  }
+  .footer-bottom__left {
+    flex-direction: column;
+  }
+  .footer-bottom__left p {
+    padding-top: 20px;
   }
   .footer-bottom__social {
     margin-bottom: 10px;

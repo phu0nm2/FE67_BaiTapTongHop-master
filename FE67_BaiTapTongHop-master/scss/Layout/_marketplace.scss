@@ -45,6 +45,10 @@
           background: $green-color-0;
         }
       }
+      &:last-child {
+        padding-top: $pd-1 + 6;
+        place-self: center;
+      }
     }
   }
   @include responsive("medium") {
