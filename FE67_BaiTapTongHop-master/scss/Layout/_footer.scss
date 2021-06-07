@@ -10,6 +10,13 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
 
+  &__links {
+    a {
+      p {
+        @include styleText($gray-color-2, $fs-1, $fw-normal);
+      }
+    }
+  }
   &__title {
     display: flex;
     align-items: center;
@@ -184,6 +191,12 @@
     align-items: center;
     &__right {
       flex-direction: column;
+    }
+    &__left {
+      flex-direction: column;
+      p {
+        padding-top: $pd-2;
+      }
     }
 
     &__social {

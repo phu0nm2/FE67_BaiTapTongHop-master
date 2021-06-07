@@ -94,8 +94,8 @@ $(function () {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
-          infinite: true,
-          dots: true,
+          // infinite: true,
+          // dots: true,
         },
       },
       {

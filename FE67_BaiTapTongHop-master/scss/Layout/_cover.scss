@@ -5,7 +5,7 @@
     position: absolute;
     width: 100%;
     max-width: 50%;
-    top: 15%;
+    top: 10%;
     left: -8%;
     transform: translate(20%, 50%);
     z-index: 2;
@@ -82,9 +82,9 @@
     .cover-btn__search {
       display: block;
     }
-  }
-  .cover-text__courses {
-    max-width: 90%;
+    .cover-text__courses {
+      max-width: 90%;
+    }
   }
 }
 
@@ -95,6 +95,11 @@
       max-width: 55%;
       h1 {
         @include styleText($white-color-0, $fs-4, $fw-bold);
+      }
+    }
+    .cover-content {
+      .styleImg2 {
+        display: block;
       }
     }
   }
