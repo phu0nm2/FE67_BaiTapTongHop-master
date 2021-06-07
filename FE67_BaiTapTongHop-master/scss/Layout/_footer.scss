@@ -116,6 +116,32 @@
   }
 }
 
+.footer-signUp {
+  padding-bottom: 50px;
+  text-align: center;
+
+  p {
+    font-size: $fs-0 + 2;
+    margin-top: $mg-1 + 5;
+  }
+
+  &__btn {
+    @include styleButton(
+      $pd-1,
+      35px,
+      $green-color-0,
+      $green-color-0,
+      $border-radius
+    );
+    @include styleText($white-color-0, $fs-0 + 2, $fw-bold-0);
+    display: inline-block;
+    &:hover {
+      @include styleButtonHover($white-color-0, $green-color-5, $green-color-5);
+      text-decoration: none;
+    }
+  }
+}
+
 @include responsive("large") {
   .footer-top {
     grid-template-columns: repeat(3, 1fr);
