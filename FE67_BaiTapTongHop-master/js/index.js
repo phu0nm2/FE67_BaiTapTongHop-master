@@ -170,3 +170,134 @@ $(function () {
     ],
   });
 });
+
+// Quest (selling)
+
+var myEle = function (ele) {
+  return document.getElementById(ele);
+};
+
+var sellClick = function () {
+  var sell = myEle("sell");
+  var sellBlock = myEle("sellblock");
+  var sell_icon = myEle("sell-icon");
+  var sell_block = myEle("sell-block");
+
+  if (sellBlock.style.display === "block") {
+    sellBlock.style.display = "none";
+    sell.style.height = "70px";
+    sell_icon.style.display = "block";
+    sell_block.style.display = "none";
+  } else {
+    sellBlock.style.display = "block";
+    sell.style.height = "120px";
+    sell_icon.style.display = "none";
+    sell_block.style.display = "block";
+  }
+};
+
+var moneyClick = function () {
+  var money = myEle("money");
+  var moneyBlock = myEle("moneyblock");
+  var money_icon = myEle("money-icon");
+  var money_block = myEle("money-block");
+
+  if (moneyBlock.style.display === "block") {
+    moneyBlock.style.display = "none";
+    money.style.height = "70px";
+    money_icon.style.display = "block";
+    money_block.style.display = "none";
+  } else {
+    moneyBlock.style.display = "block";
+    money.style.height = "120px";
+    money_icon.style.display = "none";
+    money_block.style.display = "block";
+  }
+};
+
+var costClick = function () {
+  var cost = myEle("cost");
+  var costBlock = myEle("costblock");
+  var cost_icon = myEle("cost-icon");
+  var cost_block = myEle("cost-block");
+
+  if (costBlock.style.display === "block") {
+    costBlock.style.display = "none";
+    cost.style.height = "70px";
+    cost_icon.style.display = "block";
+    cost_block.style.display = "none";
+  } else {
+    costBlock.style.display = "block";
+    cost.style.height = "120px";
+    cost_icon.style.display = "none";
+    cost_block.style.display = "block";
+  }
+};
+
+var timesClick = function () {
+  var times = myEle("times");
+  var timesBlock = myEle("timesblock");
+  var times_icon = myEle("times-icon");
+  var times_block = myEle("times-block");
+
+  if (timesBlock.style.display === "block") {
+    timesBlock.style.display = "none";
+    times.style.height = "70px";
+    times_icon.style.display = "block";
+    times_block.style.display = "none";
+  } else {
+    timesBlock.style.display = "block";
+    times.style.height = "120px";
+    times_icon.style.display = "none";
+    times_block.style.display = "block";
+  }
+};
+
+var serviceClick = function () {
+  var service = myEle("service");
+  var serviceBlock = myEle("serviceblock");
+  var service_icon = myEle("service-icon");
+  var service_block = myEle("service-block");
+
+  if (serviceBlock.style.display === "block") {
+    serviceBlock.style.display = "none";
+    service.style.height = "70px";
+    service_icon.style.display = "block";
+    service_block.style.display = "none";
+  } else {
+    serviceBlock.style.display = "block";
+    service.style.height = "120px";
+    service_icon.style.display = "none";
+    service_block.style.display = "block";
+  }
+};
+
+var paldClick = function () {
+  var pald = myEle("pald");
+  var paldBlock = myEle("paldblock");
+  var pald_icon = myEle("pald-icon");
+  var pald_block = myEle("pald-block");
+
+  if (paldBlock.style.display === "block") {
+    paldBlock.style.display = "none";
+    pald.style.height = "70px";
+    pald_icon.style.display = "block";
+    pald_block.style.display = "none";
+  } else {
+    paldBlock.style.display = "block";
+    pald.style.height = "120px";
+    pald_icon.style.display = "none";
+    pald_block.style.display = "block";
+  }
+};
+
+// var justOneBlock = function () {
+//   var sellBlock = myEle("sellblock");
+//   var moneyBlock = myEle("moneyblock");
+
+//   if (sellBlock.style.display === "block") {
+//     moneyBlock.style.display = "none";
+//   } else {
+//     moneyBlock.style.display = "block";
+//   }
+// };

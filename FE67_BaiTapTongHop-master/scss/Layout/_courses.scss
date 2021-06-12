@@ -1,0 +1,46 @@
+.courses {
+  margin-top: $mg-2 + $mg-1;
+  padding: 48px 100px 50px;
+  background: $gray-color-8;
+  &__text {
+    width: 100%;
+    max-width: 90%;
+    h2 {
+      padding-top: $pd-1;
+      @include styleText($black-color-0, $fs-3 + 8, $fw-bold-1);
+    }
+    p {
+      @include styleText($gray-color-4, $fs-0, $fw-normal);
+    }
+  }
+  .info__video {
+    position: relative;
+  }
+  &__description {
+    // position: relative;
+    position: absolute;
+    bottom: 5%;
+    left: 25%;
+    width: 100%;
+    max-width: 50%;
+    display: flex;
+    h3 {
+      @include styleText($black-color-0, $fs-2, $fw-bold);
+    }
+    span {
+      position: absolute;
+      right: -20%;
+      bottom: 15%;
+      padding: 0px 10px;
+      background: #1dbf73;
+      @include styleText($white-color-0, $fs-1, $fw-bold);
+    }
+  }
+  &__description-rating {
+    padding-left: 24%;
+    span {
+      font-size: 14px;
+      color: #ffc100;
+    }
+  }
+}

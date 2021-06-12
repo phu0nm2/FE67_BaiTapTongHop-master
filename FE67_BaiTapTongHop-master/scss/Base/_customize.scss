@@ -25,3 +25,24 @@
     border-radius: $border-radius;
   }
 }
+
+#myModal1,
+#myModal2 {
+  .modal-dialog {
+    width: 90vw;
+    max-width: 100%;
+    margin: 0 auto;
+    @include responsive("small") {
+      width: unset;
+    }
+  }
+
+  .modal-content {
+    border: none;
+  }
+
+  .modal-body {
+    padding: 0;
+    border-radius: $border-radius;
+  }
+}

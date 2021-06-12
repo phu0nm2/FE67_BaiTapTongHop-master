@@ -43,6 +43,31 @@
   border-radius: 4px;
 }
 
+#myModal1 .modal-dialog,
+#myModal2 .modal-dialog {
+  width: 90vw;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 576px) {
+  #myModal1 .modal-dialog,
+  #myModal2 .modal-dialog {
+    width: unset;
+  }
+}
+
+#myModal1 .modal-content,
+#myModal2 .modal-content {
+  border: none;
+}
+
+#myModal1 .modal-body,
+#myModal2 .modal-body {
+  padding: 0;
+  border-radius: 4px;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -2270,5 +2295,391 @@ body.sidebarShow {
     border-left: 20px solid transparent;
     border-top: unset;
   }
+}
+
+.slider {
+  padding: 16px 32px;
+}
+
+.slider__title {
+  padding: 20px 16px;
+  text-align: center;
+}
+
+.slider__title h1 {
+  letter-spacing: 1px;
+  color: #000;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.slider__content {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+}
+
+.slider__item {
+  position: relative;
+}
+
+.slider__item h6 {
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.slider__designer, .slider__developer, .slider__writer, .slider__video, .slider__musician, .slider__voice, .slider__analyst {
+  position: relative;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 305px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-position 0.5s;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5;
+}
+
+.slider__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 305px;
+  background: #000;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.slider__content:hover .slider__overlay {
+  opacity: 0.6;
+}
+
+.slider__designer {
+  background-image: url("/FE67_BaiTapTongHop-master/img/designer.jpg");
+}
+
+.slider__designer:hover {
+  background-size: 105%;
+}
+
+.slider__designer:hover .slider__overlay {
+  opacity: 0;
+}
+
+.slider__developer {
+  background-image: url("/FE67_BaiTapTongHop-master/img/developer.jpg");
+}
+
+.slider__developer:hover {
+  background-position: 10% 0;
+}
+
+.slider__developer:hover .slider__overlay {
+  opacity: 0;
+}
+
+.slider__writer {
+  background-image: url("/FE67_BaiTapTongHop-master/img/writer.jpg");
+}
+
+.slider__writer:hover {
+  background-position: 45% 0;
+}
+
+.slider__writer:hover .slider__overlay {
+  opacity: 0;
+}
+
+.slider__video {
+  background-image: url("/FE67_BaiTapTongHop-master/img/video.jpg");
+}
+
+.slider__video:hover {
+  background-size: 105%;
+}
+
+.slider__video:hover .slider__overlay {
+  opacity: 0;
+}
+
+.slider__musician {
+  background-image: url("/FE67_BaiTapTongHop-master/img/musician.jpg");
+}
+
+.slider__musician:hover {
+  background-size: 105%;
+}
+
+.slider__musician:hover .slider__overlay {
+  opacity: 0;
+}
+
+.slider__voice {
+  background-image: url("/FE67_BaiTapTongHop-master/img/voiceover.jpg");
+}
+
+.slider__voice:hover {
+  background-size: 105%;
+}
+
+.slider__voice:hover .slider__overlay {
+  opacity: 0;
+}
+
+.slider__analyst {
+  background-image: url("/FE67_BaiTapTongHop-master/img/analyst.jpg");
+}
+
+.slider__analyst:hover {
+  background-position: 45% 0;
+}
+
+.slider__analyst:hover .slider__overlay {
+  opacity: 0;
+}
+
+.slider__itemStyle {
+  display: grid;
+  place-self: center;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  background: #e4e5e7;
+  width: 100%;
+  max-width: 100%;
+  height: 305px;
+  cursor: pointer;
+}
+
+.slider__itemStyle i {
+  color: red;
+  font-size: 32px;
+  padding-top: 20px;
+}
+
+.slider__itemStyle h3 {
+  padding-top: 16px;
+  color: #404145;
+  font-size: 32px;
+  font-weight: 400;
+  width: 50%;
+}
+
+.slider__itemStyle a {
+  margin-top: -15px;
+  transform: translateY(-50%);
+}
+
+.slider__styleIcon {
+  max-height: 0;
+  padding-top: 32px;
+}
+
+.slider .modal__content {
+  position: relative;
+}
+
+.slider .modal__content .des-img__right {
+  width: 100%;
+  max-width: 95%;
+}
+
+.slider .modal__text {
+  margin-left: -35px;
+  text-align: revert;
+  padding-left: 20px;
+}
+
+.slider .modal__text h5 {
+  padding: 40px 0;
+  color: #404145;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.slider .modal__text .des-icon-top {
+  width: 60px;
+  height: 60px;
+}
+
+.slider .modal__text .des-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.slider .modal__text .modal__right h6 {
+  color: #404145;
+  font-size: 20px;
+  font-weight: 400;
+  width: 100%;
+  max-width: 70%;
+  padding-left: 16px;
+}
+
+.slider .modal__text a {
+  position: absolute;
+  bottom: 10%;
+}
+
+.slider .modal__textLeft {
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 400;
+  width: 100%;
+  max-width: 45%;
+  font-family: italic;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.616), rgba(0, 0, 0, 0.616));
+}
+
+.slider .modal__textLeft i::after {
+  content: "";
+  display: block;
+  width: 10%;
+  height: 2px;
+  background: white;
+}
+
+.slider .modal__textLeft span {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.slider .modal__textLeft .modal__textLeft__style {
+  border-right: 1px solid white;
+  padding-right: 5px;
+}
+
+.courses {
+  margin-top: 35px;
+  padding: 48px 100px 50px;
+  background: #f7f7f7;
+}
+
+.courses__text {
+  width: 100%;
+  max-width: 90%;
+}
+
+.courses__text h2 {
+  padding-top: 10px;
+  color: #000;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.courses__text p {
+  color: #7a7d85;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.courses .info__video {
+  position: relative;
+}
+
+.courses__description {
+  position: absolute;
+  bottom: 5%;
+  left: 25%;
+  width: 100%;
+  max-width: 50%;
+  display: flex;
+}
+
+.courses__description h3 {
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.courses__description span {
+  position: absolute;
+  right: -20%;
+  bottom: 15%;
+  padding: 0px 10px;
+  background: #1dbf73;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.courses__description-rating {
+  padding-left: 24%;
+}
+
+.courses__description-rating span {
+  font-size: 14px;
+  color: #ffc100;
+}
+
+.quest {
+  background: #f7f7f7;
+  padding-bottom: 20px;
+}
+
+.quest__title {
+  text-align: center;
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.quest__item {
+  width: 100%;
+  max-width: 100%;
+  background: #fff;
+  height: 70px;
+  padding-top: 25px;
+  padding-left: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: all 0.3s;
+}
+
+.quest__item h6 {
+  display: flex;
+  justify-content: space-between;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.quest__item p {
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.quest__item:hover {
+  border-left: 5px solid #1dbf73;
+}
+
+.quest__item #sellblock,
+.quest__item #moneyblock,
+.quest__item #costblock,
+.quest__item #timesblock,
+.quest__item #serviceblock,
+.quest__item #paldblock {
+  display: none;
+}
+
+.quest__item #sell-block,
+.quest__item #money-block,
+.quest__item #cost-block,
+.quest__item #times-block,
+.quest__item #service-block,
+.quest__item #pald-block {
+  display: none;
 }
 /*# sourceMappingURL=main.css.map */
