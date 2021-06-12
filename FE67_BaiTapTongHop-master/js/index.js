@@ -220,6 +220,7 @@ $(function () {
 //   var cost_icon = myEle("cost-icon");
 //   var cost_block = myEle("cost-block");
 
+<<<<<<< HEAD
 //   if (costBlock.style.display === "block") {
 //     costBlock.style.display = "none";
 //     cost.style.height = "70px";
@@ -328,3 +329,23 @@ const handleQuestionSelling = () => {
 };
 
 handleQuestionSelling();
+=======
+var paldClick = function () {
+  var pald = myEle("pald");
+  var paldBlock = myEle("paldblock");
+  var pald_icon = myEle("pald-icon");
+  var pald_block = myEle("pald-block");
+
+  if (paldBlock.style.display === "block") {
+    paldBlock.style.display = "none";
+    pald.style.height = "70px";
+    pald_icon.style.display = "block";
+    pald_block.style.display = "none";
+  } else {
+    paldBlock.style.display = "block";
+    pald.style.height = "120px";
+    pald_icon.style.display = "none";
+    pald_block.style.display = "block";
+  }
+};
+>>>>>>> b5e06645351c8c5651b0906ae23950a8e3deda1e

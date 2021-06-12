@@ -2340,6 +2340,7 @@ body.sidebarShow {
   background-size: cover;
   height: 305px;
   width: 100%;
+  max-width: 100%;
   cursor: pointer;
   transition: background-position 0.5s;
   transition: all 0.5s;
@@ -2560,6 +2561,20 @@ body.sidebarShow {
   padding-right: 5px;
 }
 
+@media screen and (max-width: 992px) {
+  .slider__content {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .slider__content {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+  }
+}
+
 .courses {
   margin-top: 35px;
   padding: 48px 100px 50px;
@@ -2621,6 +2636,49 @@ body.sidebarShow {
 .courses__description-rating span {
   font-size: 14px;
   color: #ffc100;
+}
+
+@media screen and (max-width: 1024px) {
+  .courses .info__video {
+    height: 65%;
+  }
+  .courses__description {
+    bottom: 37%;
+    left: 10%;
+    width: 100%;
+    max-width: 69%;
+  }
+  .courses__description-rating {
+    padding-left: 6%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .courses .info__video .play {
+    background-size: 60px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .courses .row {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .courses .row {
+    flex-direction: column;
+  }
+  .courses .row .style-moblie {
+    padding-top: 270px;
+  }
+  .courses__text h2 {
+    font-size: 20px;
+  }
+  .courses__description-rating {
+    padding-left: 10px;
+    padding-top: 30px;
+  }
 }
 
 .quest {
