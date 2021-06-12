@@ -250,6 +250,46 @@
   }
 }
 
+.slider {
+  #myModal1,
+  #myModal2,
+  #myModal3,
+  #myModal4,
+  #myModal5,
+  #myModal6,
+  #myModal7 {
+    .modal-content {
+      .modal-body {
+        padding: 0;
+        .img-right {
+          width: 70%;
+          height: 600px;
+        }
+      }
+    }
+    .des-img__developer {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  #myModal1,
+  #myModal2,
+  #myModal3,
+  #myModal4,
+  #myModal5,
+  #myModal6,
+  #myModal7 {
+    .modal-dialog {
+      max-width: 1200px;
+      margin-top: 0;
+      .des-img__right {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
 @include responsive("large") {
   .slider {
     &__content {

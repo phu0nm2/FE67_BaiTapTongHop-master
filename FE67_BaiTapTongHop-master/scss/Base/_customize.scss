@@ -27,17 +27,25 @@
 }
 
 #myModal1,
-#myModal2 {
+#myModal2,
+#myModal3,
+#myModal4,
+#myModal5,
+#myModal6,
+#myModal7 {
   .modal-dialog {
     width: 90vw;
     max-width: 100%;
     margin: 0 auto;
+
     @include responsive("small") {
+      display: none;
       width: unset;
     }
   }
 
   .modal-content {
+    height: 600px;
     border: none;
   }
 
