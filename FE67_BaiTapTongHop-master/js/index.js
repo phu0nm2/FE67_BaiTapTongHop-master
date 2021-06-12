@@ -43,7 +43,6 @@ $(function () {
       $(content).slideDown();
     } else {
       $(content).slideUp();
-      setTimeout(() => content.setAttribute("style", ""), 500);
     }
   });
 });
@@ -59,6 +58,18 @@ $(function () {
         $(content).slideUp();
         setTimeout(() => content.setAttribute("style", ""), 500);
       }
+    }
+  });
+});
+
+// Handle q&a
+$(function () {
+  $(".questions__item").click((e) => {
+    const content = e.currentTarget.querySelector("p");
+    if (e.currentTarget.classList.toggle("active")) {
+      $(content).slideDown();
+    } else {
+      $(content).slideUp();
     }
   });
 });
