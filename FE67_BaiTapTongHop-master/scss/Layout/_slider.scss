@@ -1,0 +1,251 @@
+.slider {
+  padding: 16px 32px;
+
+  &__title {
+    padding: 20px 16px;
+    text-align: center;
+    h1 {
+      letter-spacing: 1px;
+      @include styleText($black-color-0, $fs-0 + $fs-0, $fw-bold);
+    }
+  }
+
+  &__content {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+  }
+
+  &__item {
+    position: relative;
+    h6 {
+      position: absolute;
+      bottom: 0;
+      left: 5%;
+      @include styleText($white-color-0, $fs-2 + 4, $fw-bold);
+    }
+  }
+
+  &__designer,
+  &__developer,
+  &__writer,
+  &__video,
+  &__musician,
+  &__voice,
+  &__analyst {
+    position: relative;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 305px;
+    width: 100%;
+    cursor: pointer;
+
+    transition: background-position 0.5s;
+    -webkit-transition: background-position 0.5s;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 305px;
+    background: $black-color-0;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+
+  &__content:hover {
+    .slider__overlay {
+      opacity: 0.6;
+    }
+  }
+
+  &__designer {
+    background-image: url("/FE67_BaiTapTongHop-master/img/designer.jpg");
+    &:hover {
+      background-size: 105%;
+    }
+  }
+
+  &__designer:hover &__overlay {
+    opacity: 0;
+  }
+
+  &__developer {
+    background-image: url("/FE67_BaiTapTongHop-master/img/developer.jpg");
+    &:hover {
+      background-position: 10% 0;
+    }
+  }
+
+  &__developer:hover &__overlay {
+    opacity: 0;
+  }
+
+  &__writer {
+    background-image: url("/FE67_BaiTapTongHop-master/img/writer.jpg");
+    &:hover {
+      background-position: 45% 0;
+    }
+  }
+
+  &__writer:hover &__overlay {
+    opacity: 0;
+  }
+
+  &__video {
+    background-image: url("/FE67_BaiTapTongHop-master/img/video.jpg");
+    &:hover {
+      background-size: 105%;
+    }
+  }
+
+  &__video:hover &__overlay {
+    opacity: 0;
+  }
+
+  &__musician {
+    background-image: url("/FE67_BaiTapTongHop-master/img/musician.jpg");
+    &:hover {
+      background-size: 105%;
+    }
+  }
+
+  &__musician:hover &__overlay {
+    opacity: 0;
+  }
+
+  &__voice {
+    background-image: url("/FE67_BaiTapTongHop-master/img/voiceover.jpg");
+    &:hover {
+      background-size: 105%;
+    }
+  }
+
+  &__voice:hover &__overlay {
+    opacity: 0;
+  }
+
+  &__analyst {
+    background-image: url("/FE67_BaiTapTongHop-master/img/analyst.jpg");
+    &:hover {
+      background-position: 45% 0;
+    }
+  }
+
+  &__analyst:hover &__overlay {
+    opacity: 0;
+  }
+
+  &__itemStyle {
+    display: grid;
+    place-self: center;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    background: $gray-color-3;
+    width: 100%;
+    max-width: 100%;
+    height: 305px;
+    cursor: pointer;
+    i {
+      color: red;
+      font-size: 32px;
+      padding-top: $pd-2;
+    }
+    h3 {
+      padding-top: 16px;
+      @include styleText($black-color-1, $fs-4 - 8, $fw-normal);
+
+      width: 50%;
+    }
+    a {
+      margin-top: -15px;
+      transform: translateY(-50%);
+    }
+  }
+  &__styleIcon {
+    max-height: 0;
+    padding-top: 32px;
+  }
+
+  //   modal
+}
+
+.slider {
+  .modal {
+    &__content {
+      position: relative;
+      .des-img__right {
+        width: 100%;
+        max-width: 95%;
+      }
+    }
+    &__text {
+      margin-left: -35px;
+      text-align: revert;
+      padding-left: 20px;
+      h5 {
+        padding: $pd-2 + $pd-2 0;
+        @include styleText($black-color-1, $fs-3, $fw-bold);
+      }
+      .des-icon-top {
+        width: 60px;
+        height: 60px;
+      }
+      .des-icon {
+        width: 60px;
+        height: 60px;
+      }
+      .modal__right {
+        // padding-left: 16px;
+
+        h6 {
+          @include styleText($black-color-1, $fs-2, $fw-normal);
+          width: 100%;
+          max-width: 70%;
+          padding-left: 16px;
+        }
+      }
+      a {
+        position: absolute;
+        bottom: 10%;
+      }
+    }
+    &__textLeft {
+      position: absolute;
+      bottom: 10%;
+      left: 0;
+      @include styleText($white-color-0, $fs-3, $fw-normal);
+      width: 100%;
+      max-width: 45%;
+      font-family: italic;
+
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.616),
+        rgba(0, 0, 0, 0.616)
+      );
+      i::after {
+        content: "";
+        display: block;
+        width: 10%;
+        height: 2px;
+        background: white;
+      }
+      span {
+        @include styleText($white-color-0, $fs-0, $fw-bold);
+      }
+
+      .modal__textLeft__style {
+        border-right: 1px solid white;
+        padding-right: 5px;
+      }
+    }
+  }
+}

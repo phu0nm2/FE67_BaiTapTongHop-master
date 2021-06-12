@@ -1,0 +1,48 @@
+.quest {
+  background: $gray-color-8;
+  padding-bottom: $pd-2;
+  &__title {
+    text-align: center;
+    @include styleText($black-color-0, $fs-2, $fw-bold);
+  }
+  &__content {
+  }
+  &__item {
+    width: 100%;
+    max-width: 100%;
+    background: $white-color-0;
+    height: 70px;
+    padding-top: 25px;
+    padding-left: $pd-1;
+    cursor: pointer;
+    margin-bottom: $mg-1;
+    transition: all 0.3s;
+    h6 {
+      display: flex;
+      justify-content: space-between;
+      @include styleText($black-color-0, $fs-0, $fw-bold);
+    }
+    p {
+      @include styleText($black-color-0, $fs-1, $fw-normal);
+    }
+    &:hover {
+      border-left: 5px solid $green-color-0;
+    }
+    #sellblock,
+    #moneyblock,
+    #costblock,
+    #timesblock,
+    #serviceblock,
+    #paldblock {
+      display: none;
+    }
+    #sell-block,
+    #money-block,
+    #cost-block,
+    #times-block,
+    #service-block,
+    #pald-block {
+      display: none;
+    }
+  }
+}

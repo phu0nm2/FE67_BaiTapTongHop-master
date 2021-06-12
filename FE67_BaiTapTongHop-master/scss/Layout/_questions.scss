@@ -1,0 +1,50 @@
+.questions {
+  padding: 50px 0;
+  background-color: $gray-color-8;
+  .container-fluid {
+    padding: 0 50px;
+  }
+
+  &__title {
+    @include styleText(#222325, 32px, $fw-bold-1);
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    background-color: $white-color-0;
+    margin-bottom: $mg-1 + 5;
+    max-height: 60px;
+    overflow: hidden;
+    border-radius: $border-radius;
+    border-left: 5px solid transparent;
+    transition: all 0.4s linear;
+    cursor: pointer;
+    &:hover {
+      border-left-color: $green-color-0;
+    }
+    h6 {
+      @include styleText(#0e0e0f, $fs-0, $fw-bold-1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: $pd-2;
+      margin-bottom: 0;
+      i {
+        transition: all 0.4s linear;
+      }
+    }
+    .answer {
+      @include styleText(#0e0e0f, $fs-1 + 1, $fw-normal);
+      padding: $pd-2;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.questions__item.open {
+  max-height: 200px;
+  h6 i {
+    transform: rotate(-180deg);
+  }
+}
