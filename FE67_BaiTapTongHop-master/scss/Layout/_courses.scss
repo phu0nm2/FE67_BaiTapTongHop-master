@@ -44,3 +44,56 @@
     }
   }
 }
+
+@include responsive("x-large") {
+  .courses {
+    .info__video {
+      height: 65%;
+    }
+
+    &__description {
+      bottom: 37%;
+      left: 10%;
+      width: 100%;
+      max-width: 69%;
+    }
+    &__description-rating {
+      padding-left: 6%;
+    }
+  }
+}
+
+@include responsive("large") {
+  .courses {
+    .info__video .play {
+      background-size: 60px;
+    }
+  }
+}
+@include responsive("large") {
+  .courses {
+    .row {
+      flex-direction: column;
+    }
+  }
+}
+@include responsive("small") {
+  .courses {
+    .row {
+      flex-direction: column;
+      .style-moblie {
+        padding-top: 270px;
+      }
+    }
+
+    &__text {
+      h2 {
+        font-size: 20px;
+      }
+    }
+    &__description-rating {
+      padding-left: 10px;
+      padding-top: 30px;
+    }
+  }
+}

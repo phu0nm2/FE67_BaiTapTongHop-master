@@ -290,14 +290,3 @@ var paldClick = function () {
     pald_block.style.display = "block";
   }
 };
-
-// var justOneBlock = function () {
-//   var sellBlock = myEle("sellblock");
-//   var moneyBlock = myEle("moneyblock");
-
-//   if (sellBlock.style.display === "block") {
-//     moneyBlock.style.display = "none";
-//   } else {
-//     moneyBlock.style.display = "block";
-//   }
-// };

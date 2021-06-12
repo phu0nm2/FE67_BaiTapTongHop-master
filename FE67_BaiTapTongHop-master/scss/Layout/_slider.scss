@@ -40,8 +40,8 @@
     background-size: cover;
     height: 305px;
     width: 100%;
+    max-width: 100%;
     cursor: pointer;
-
     transition: background-position 0.5s;
     -webkit-transition: background-position 0.5s;
     transition: all 0.5s;
@@ -246,6 +246,23 @@
         border-right: 1px solid white;
         padding-right: 5px;
       }
+    }
+  }
+}
+
+@include responsive("large") {
+  .slider {
+    &__content {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 30px;
+    }
+  }
+}
+@include responsive("small") {
+  .slider {
+    &__content {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 30px;
     }
   }
 }
